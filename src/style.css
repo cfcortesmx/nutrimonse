@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-neutral-900;
+  }
+
+  /* Smooth scrolling con Lenis */
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
+@layer components {
+  /* Botones */
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-full 
+           hover:bg-primary-700 transition-all duration-300 hover:shadow-lg 
+           hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-6 py-3 bg-white text-primary-600 font-semibold rounded-full 
+           border-2 border-primary-600 hover:bg-primary-50 transition-all duration-300 
+           hover:shadow-lg hover:scale-105 active:scale-95;
+  }
+
+  /* Secciones */
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl font-bold text-neutral-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full 
+           text-sm font-semibold;
+  }
+
+  /* Modal Micromodal */
+  .modal__overlay {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-black/50 
+           flex items-center justify-center z-50;
+  }
+
+  .modal__container {
+    @apply bg-white rounded-2xl p-8 max-w-md mx-4 shadow-2xl;
+  }
+
+  /* Form inputs con @tailwindcss/forms */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply w-full rounded-lg border-neutral-300 
+           focus:border-primary-500 focus:ring-primary-500 
+           transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  /* Animaciones custom */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Parallax helpers */
+  .parallax {
+    will-change: transform;
+  }
+}
+
+/* Swiper customization */
+.swiper {
+  @apply pb-12;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-primary-400 opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-600 opacity-100;
+}
+
+/* PhotoSwipe customization */
+.pswp__bg {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* FAQ Accordion */
+.faq-item .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Loading skeleton (opcional para lozad) */
+.lozad {
+  @apply transition-opacity duration-500;
+}
+
+.lozad[data-loaded="true"] {
+  @apply opacity-100;
+}
+
+/* Navbar scroll effect */
+#navbar.scrolled {
+  @apply shadow-lg bg-white;
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* Hover effects */
+.service-card {
+  @apply transition-all duration-300;
+}
+
+.service-card:hover {
+  @apply transform -translate-y-2;
+}
+
+/* Hero image effects */
+.hero-image img {
+  @apply transition-transform duration-500;
+}
+
+.hero-image:hover img {
+  @apply scale-105;
+}
+
+/* Floating badges animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-image > div:not(.relative) {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .section-padding {
+    @apply py-12;
+  }
+
+  .section-title {
+    @apply text-3xl;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
