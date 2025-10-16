@@ -198,7 +198,7 @@ gsap.from('.credential-card', {
   },
 });
 
-// Áreas de Especialización animations
+// Áreas de Especialización animations - Benefits Cluster
 gsap.from('#areas-especializacion .section-title', {
   opacity: 0,
   y: 30,
@@ -211,16 +211,30 @@ gsap.from('#areas-especializacion .section-title', {
   },
 });
 
-gsap.from('.area-card', {
+// Animación de la imagen central
+gsap.from('#areas-especializacion .aspect-square', {
   opacity: 0,
-  y: 60,
-  duration: 1,
-  stagger: 0.2,
+  scale: 0.9,
+  duration: 1.2,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '#areas-especializacion',
+    start: 'top 60%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
+// Animación de los benefit items (stagger por columna)
+gsap.from('.benefit-item', {
+  opacity: 0,
+  x: (index) => (index < 3 ? -40 : 40), // Izquierda negativo, derecha positivo
+  duration: 0.8,
+  stagger: 0.15,
   ease: 'power2.out',
   clearProps: 'all',
   scrollTrigger: {
     trigger: '#areas-especializacion',
-    start: 'top 60%',
+    start: 'top 55%',
     toggleActions: 'play none none reverse',
   },
 });
