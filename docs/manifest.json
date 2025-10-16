@@ -1,0 +1,16 @@
+{
+  "name": "Nutrimonse",
+  "short_name": "Nutrimonse",
+  "description": "Nutrición especializada para el embarazo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e74c64",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

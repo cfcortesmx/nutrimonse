@@ -5,3 +5,6 @@ dist
 .env
 .vscode
 .idea
+
+# No ignorar docs (usado para GitHub Pages)
+!docs

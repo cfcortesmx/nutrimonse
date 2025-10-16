@@ -1,0 +1,10 @@
+<!-- Placeholder: Reemplaza con imagen real -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect fill="#e74c64" width="1200" height="630"/>
+  <text x="600" y="300" font-family="Arial" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+    Nutrimonse 🍓
+  </text>
+  <text x="600" y="350" font-family="Arial" font-size="24" fill="white" text-anchor="middle">
+    Nutrición para el Embarazo
+  </text>
+</svg>
