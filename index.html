@@ -198,7 +198,7 @@
       <div class="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
         
         <!-- Pilar 1: Resultados Comprobados -->
-        <div class="value-pillar group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
           <div class="flex flex-col items-center text-center">
             <!-- Icon -->
             <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -220,7 +220,7 @@
         </div>
 
         <!-- Pilar 2: Sin Sufrimiento -->
-        <div class="value-pillar group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
           <div class="flex flex-col items-center text-center">
             <!-- Icon -->
             <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -242,7 +242,7 @@
         </div>
 
         <!-- Pilar 3: Tecnología + Acompañamiento -->
-        <div class="value-pillar group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
           <div class="flex flex-col items-center text-center">
             <!-- Icon -->
             <div class="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -267,6 +267,160 @@
     </div>
   </section>
   <!-- VALUE PROPOSITION END -->
+
+  <!-- SOBRE LA ESPECIALISTA START -->
+  <section id="sobre-especialista" class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Layout: Foto + Contenido -->
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <!-- Columna Izquierda: Foto -->
+          <div class="about-photo">
+            <div class="relative">
+              <!-- Decorative background -->
+              <div class="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl -z-10"></div>
+              
+              <!-- Foto de la especialista -->
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/nutrimonse/assets/especialista-monserrat.jpg" 
+                  alt="Monserrat Moreno - Nutrióloga Clínica Especialista en Salud Hormonal"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                >
+              </div>
+              
+              <!-- Badge flotante con cédula -->
+              <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 border-2 border-primary-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-neutral-500 font-medium">Cédula Profesional</p>
+                    <p class="text-sm font-bold text-neutral-900">11581539</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Contenido -->
+          <div class="about-content">
+            
+            <!-- Título -->
+            <div class="mb-8">
+              <p class="text-primary-600 font-semibold text-sm uppercase tracking-wide mb-2">Conoce a tu nutrióloga</p>
+              <h2 class="font-display text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
+                Hola, soy <span class="text-primary-600">Monserrat Moreno</span>
+              </h2>
+            </div>
+
+            <!-- Bio -->
+            <div class="prose prose-lg text-neutral-700 mb-8 space-y-4">
+              <p>
+                Soy <strong>nutrióloga clínica</strong> con maestría y especialización en salud hormonal femenina. Mi misión es ayudarte a recuperar tu bienestar desde adentro, utilizando la alimentación como herramienta terapéutica.
+              </p>
+              <p>
+                Después de trabajar con cientos de mujeres, entendí que la nutrición va más allá de contar calorías. Se trata de entender tu cuerpo, tus hormonas y crear un plan que funcione para tu vida real: tu economía, tus gustos, tu tiempo y tus objetivos.
+              </p>
+              <p>
+                Mi enfoque combina <strong>ciencia, empatía y tecnología</strong> para darte resultados sin restricciones extremas ni dietas de moda.
+              </p>
+            </div>
+
+            <!-- Credenciales Visuales -->
+            <div class="credentials-grid grid grid-cols-2 gap-4">
+              
+              <!-- Credencial 1 -->
+              <div class="credential-card group bg-gradient-to-br from-primary-50 to-white p-4 rounded-xl border border-primary-100 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-neutral-500 mb-1">Formación</p>
+                    <p class="text-sm font-bold text-neutral-900">Lic. en Nutrición</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Credencial 2 -->
+              <div class="credential-card group bg-gradient-to-br from-secondary-50 to-white p-4 rounded-xl border border-secondary-100 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 008 10.586V5L7 4z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-neutral-500 mb-1">Posgrado</p>
+                    <p class="text-sm font-bold text-neutral-900">Maestría en Nutrición Clínica</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Credencial 3 -->
+              <div class="credential-card group bg-gradient-to-br from-primary-50 to-white p-4 rounded-xl border border-primary-100 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-neutral-500 mb-1">Especialización</p>
+                    <p class="text-sm font-bold text-neutral-900">Salud Hormonal Femenina</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Credencial 4 -->
+              <div class="credential-card group bg-gradient-to-br from-secondary-50 to-white p-4 rounded-xl border border-secondary-100 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-neutral-500 mb-1">Diplomado</p>
+                    <p class="text-sm font-bold text-neutral-900">Nutrición Pediátrica</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Credencial 5 -->
+              <div class="credential-card group bg-gradient-to-br from-primary-50 to-white p-4 rounded-xl border border-primary-100 hover:shadow-lg transition-all duration-300 md:col-span-2">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs text-neutral-500 mb-1">Certificación</p>
+                    <p class="text-sm font-bold text-neutral-900">Entrenamiento con Pesas</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- SOBRE LA ESPECIALISTA END -->
 
   <!-- Servicios Section -->
   <section id="servicios" class="section-padding bg-white">

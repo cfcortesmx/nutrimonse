@@ -137,6 +137,7 @@ gsap.from('.value-prop-title', {
   opacity: 0,
   y: 40,
   duration: 1,
+  ease: 'power2.out',
   scrollTrigger: {
     trigger: '#value-proposition',
     start: 'top 70%',
@@ -147,11 +148,52 @@ gsap.from('.value-prop-title', {
 gsap.from('.value-pillar', {
   opacity: 0,
   y: 60,
-  duration: 0.8,
-  stagger: 0.2,
+  duration: 1,
+  stagger: 0.15,
+  ease: 'power2.out',
+  clearProps: 'all',
   scrollTrigger: {
     trigger: '#value-proposition',
     start: 'top 60%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
+// Sobre la Especialista section animations
+gsap.from('.about-photo', {
+  opacity: 0,
+  x: -60,
+  duration: 1.2,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '#sobre-especialista',
+    start: 'top 65%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
+gsap.from('.about-content', {
+  opacity: 0,
+  x: 60,
+  duration: 1.2,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '#sobre-especialista',
+    start: 'top 65%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
+gsap.from('.credential-card', {
+  opacity: 0,
+  y: 40,
+  duration: 0.8,
+  stagger: 0.1,
+  ease: 'power2.out',
+  clearProps: 'all',
+  scrollTrigger: {
+    trigger: '.credentials-grid',
+    start: 'top 75%',
     toggleActions: 'play none none reverse',
   },
 });
