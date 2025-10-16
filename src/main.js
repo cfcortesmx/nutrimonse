@@ -132,6 +132,30 @@ gsap.from('.hero-image', {
   ease: 'power3.out',
 });
 
+// Value Proposition section animations
+gsap.from('.value-prop-title', {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  scrollTrigger: {
+    trigger: '#value-proposition',
+    start: 'top 70%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
+gsap.from('.value-pillar', {
+  opacity: 0,
+  y: 60,
+  duration: 0.8,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: '#value-proposition',
+    start: 'top 60%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
 // Parallax background
 gsap.to('.parallax-bg', {
   yPercent: 30,
