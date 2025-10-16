@@ -269,8 +269,36 @@
   <!-- VALUE PROPOSITION END -->
 
   <!-- SOBRE LA ESPECIALISTA START -->
-  <section id="sobre-especialista" class="py-20 md:py-28 bg-white">
-    <div class="container mx-auto px-4">
+  <section id="sobre-especialista" class="py-20 md:py-28 bg-gradient-to-br from-primary-50/20 via-white to-secondary-50/20 relative overflow-hidden">
+    
+    <!-- Decorative SVG Background Elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <!-- Círculo decorativo superior izquierda -->
+      <svg class="absolute -top-20 -left-20 w-64 h-64 text-primary-100 opacity-30" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="currentColor"/>
+      </svg>
+      
+      <!-- Forma orgánica derecha -->
+      <svg class="absolute top-1/4 -right-16 w-48 h-48 text-secondary-100 opacity-25" viewBox="0 0 200 200">
+        <path d="M100,20 Q180,50 180,100 T100,180 Q20,150 20,100 T100,20" fill="currentColor"/>
+      </svg>
+      
+      <!-- Círculos pequeños flotantes -->
+      <svg class="absolute bottom-20 left-1/4 w-16 h-16 text-primary-200 opacity-40" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="currentColor"/>
+      </svg>
+      
+      <svg class="absolute top-1/3 right-1/4 w-12 h-12 text-secondary-200 opacity-40" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="currentColor"/>
+      </svg>
+      
+      <!-- Líneas decorativas suaves -->
+      <svg class="absolute bottom-0 left-0 w-full h-32 text-primary-50 opacity-50" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,40 Q300,80 600,40 T1200,40 L1200,120 L0,120 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
       <div class="max-w-6xl mx-auto">
         
         <!-- Layout: Foto + Contenido -->
@@ -282,14 +310,42 @@
               <!-- Decorative background -->
               <div class="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl -z-10"></div>
               
-              <!-- Foto de la especialista -->
-              <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+              <!-- Foto de la especialista o placeholder ilustrativo -->
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-50 to-secondary-50">
+                <!-- Placeholder ilustrativo mientras no hay foto -->
+                <div class="aspect-[3/4] flex items-center justify-center p-12">
+                  <svg class="w-full h-full text-primary-300 opacity-60" viewBox="0 0 400 500" fill="none">
+                    <!-- Silueta femenina profesional -->
+                    <circle cx="200" cy="120" r="70" fill="currentColor" opacity="0.3"/>
+                    <ellipse cx="200" cy="350" rx="120" ry="150" fill="currentColor" opacity="0.2"/>
+                    
+                    <!-- Elementos decorativos de salud -->
+                    <g opacity="0.4">
+                      <!-- Corazón -->
+                      <path d="M100,180 C100,160 80,140 60,140 C40,140 20,160 20,180 C20,200 40,220 100,260 C160,220 180,200 180,180 C180,160 160,140 140,140 C120,140 100,160 100,180 Z" fill="currentColor" transform="translate(50, 20) scale(0.6)"/>
+                      
+                      <!-- Hoja (nutrición) -->
+                      <path d="M300,200 Q320,180 340,200 Q360,220 340,240 Q320,260 300,240 Q280,220 300,200 Z M300,200 Q310,220 320,240" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
+                    </g>
+                    
+                    <!-- Texto placeholder -->
+                    <text x="200" y="450" font-family="Arial" font-size="18" fill="currentColor" text-anchor="middle" opacity="0.5">
+                      Monserrat Moreno
+                    </text>
+                    <text x="200" y="475" font-family="Arial" font-size="14" fill="currentColor" text-anchor="middle" opacity="0.4">
+                      Nutrióloga Clínica
+                    </text>
+                  </svg>
+                </div>
+                
+                <!-- Descomentar cuando tengas la foto real:
                 <img 
                   src="/nutrimonse/assets/especialista-monserrat.jpg" 
                   alt="Monserrat Moreno - Nutrióloga Clínica Especialista en Salud Hormonal"
                   class="w-full h-auto object-cover"
                   loading="lazy"
                 >
+                -->
               </div>
               
               <!-- Badge flotante con cédula -->
