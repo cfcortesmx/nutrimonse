@@ -530,12 +530,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
           
-          <!-- COLUMNA IZQUIERDA: Items 1-3 -->
+          <!-- COLUMNA IZQUIERDA: Items 1-3 con curva ascendente -->
           <div class="lg:col-span-4 space-y-8">
             
-            <!-- Item 1: Salud Hormonal -->
-            <div class="benefit-item group">
-              <div class="flex items-start gap-4">
+            <!-- Item 1: Salud Hormonal - Posición baja -->
+            <div class="benefit-item group lg:translate-y-16">
+              <div class="flex items-start gap-4 flex-row-reverse text-right">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-300">
                   <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -548,9 +548,9 @@
               </div>
             </div>
 
-            <!-- Item 2: Control de Peso -->
-            <div class="benefit-item group">
-              <div class="flex items-start gap-4">
+            <!-- Item 2: Control de Peso - Posición media -->
+            <div class="benefit-item group lg:translate-y-0">
+              <div class="flex items-start gap-4 flex-row-reverse text-right">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-secondary-100 flex items-center justify-center group-hover:bg-secondary-200 transition-colors duration-300">
                   <svg class="w-7 h-7 text-secondary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
@@ -563,9 +563,9 @@
               </div>
             </div>
 
-            <!-- Item 3: Nutrición Clínica -->
-            <div class="benefit-item group">
-              <div class="flex items-start gap-4">
+            <!-- Item 3: Nutrición Clínica - Posición alta -->
+            <div class="benefit-item group lg:-translate-y-12">
+              <div class="flex items-start gap-4 flex-row-reverse text-right">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-neutral-200 flex items-center justify-center group-hover:bg-neutral-300 transition-colors duration-300">
                   <svg class="w-7 h-7 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -599,12 +599,12 @@
             </div>
           </div>
 
-          <!-- COLUMNA DERECHA: Items 4-6 -->
+          <!-- COLUMNA DERECHA: Items 4-6 con curva descendente -->
           <div class="lg:col-span-4 space-y-8">
             
-            <!-- Item 4: Nutrición Pediátrica -->
-            <div class="benefit-item group">
-              <div class="flex items-start gap-4">
+            <!-- Item 4: Nutrición Pediátrica - Posición alta -->
+            <div class="benefit-item group lg:-translate-y-12">
+              <div class="flex items-start gap-4 text-left">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center group-hover:bg-primary-100 transition-colors duration-300">
                   <svg class="w-7 h-7 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -617,9 +617,9 @@
               </div>
             </div>
 
-            <!-- Item 5: Planes Personalizados -->
-            <div class="benefit-item group">
-              <div class="flex items-start gap-4">
+            <!-- Item 5: Planes Personalizados - Posición media -->
+            <div class="benefit-item group lg:translate-y-0">
+              <div class="flex items-start gap-4 text-left">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-secondary-50 flex items-center justify-center group-hover:bg-secondary-100 transition-colors duration-300">
                   <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -632,9 +632,9 @@
               </div>
             </div>
 
-            <!-- Item 6: Seguimiento Continuo -->
-            <div class="benefit-item group">
-              <div class="flex items-start gap-4">
+            <!-- Item 6: Seguimiento Continuo - Posición baja -->
+            <div class="benefit-item group lg:translate-y-16">
+              <div class="flex items-start gap-4 text-left">
                 <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-200 transition-colors duration-300">
                   <svg class="w-7 h-7 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
