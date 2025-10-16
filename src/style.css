@@ -219,9 +219,61 @@
   }
 }
 
+/* ===========================================
+   BENEFITS CLUSTER - Layout Orgánico
+   =========================================== */
+
+/* Alineaciones y dirección según lado */
+@layer components {
+  .benefit-item.left .content { 
+    @apply flex-row-reverse text-right justify-end; 
+  }
+  .benefit-item.right .content { 
+    @apply flex-row text-left justify-start; 
+  }
+}
+
+/* Curva con offsets incrementales para efecto envolvente */
+@layer utilities {
+  /* Columna izquierda: curva ascendente gradual */
+  .benefit-col.left .benefit-item:nth-child(1) { 
+    transform: translateY(24px); 
+  }
+  .benefit-col.left .benefit-item:nth-child(2) { 
+    transform: translateY(12px); 
+  }
+  .benefit-col.left .benefit-item:nth-child(3) { 
+    transform: translateY(0); 
+  }
+
+  /* Columna derecha: curva descendente gradual (espejo) */
+  .benefit-col.right .benefit-item:nth-child(1) { 
+    transform: translateY(0); 
+  }
+  .benefit-col.right .benefit-item:nth-child(2) { 
+    transform: translateY(12px); 
+  }
+  .benefit-col.right .benefit-item:nth-child(3) { 
+    transform: translateY(24px); 
+  }
+
+  /* En móvil quitamos la curva para mantener legibilidad */
+  @media (max-width: 1023px) {
+    .benefit-col.left .benefit-item:nth-child(1),
+    .benefit-col.left .benefit-item:nth-child(2),
+    .benefit-col.left .benefit-item:nth-child(3),
+    .benefit-col.right .benefit-item:nth-child(1),
+    .benefit-col.right .benefit-item:nth-child(2),
+    .benefit-col.right .benefit-item:nth-child(3) { 
+      transform: translateY(0); 
+    }
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {
     display: none;
   }
 }
+
