@@ -198,6 +198,33 @@ gsap.from('.credential-card', {
   },
 });
 
+// Áreas de Especialización animations
+gsap.from('#areas-especializacion .section-title', {
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '#areas-especializacion',
+    start: 'top 70%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
+gsap.from('.area-card', {
+  opacity: 0,
+  y: 60,
+  duration: 1,
+  stagger: 0.2,
+  ease: 'power2.out',
+  clearProps: 'all',
+  scrollTrigger: {
+    trigger: '#areas-especializacion',
+    start: 'top 60%',
+    toggleActions: 'play none none reverse',
+  },
+});
+
 // Parallax background
 gsap.to('.parallax-bg', {
   yPercent: 30,
