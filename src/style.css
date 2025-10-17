@@ -244,24 +244,74 @@
 /* Estilos comunes para los ítems */
 .benefit-circular-item {
   position: absolute;
-  text-align: center;
-  max-width: 180px;
+  max-width: 220px;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .benefit-circular-item:hover {
   transform: scale(1.05);
 }
 
+/* Items izquierdos: texto a la izquierda, icono a la derecha */
+.benefit-item-1,
+.benefit-item-2,
+.benefit-item-3 {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Items derechos: icono a la izquierda, texto a la derecha */
+.benefit-item-4,
+.benefit-item-5,
+.benefit-item-6 {
+  flex-direction: row;
+  text-align: left;
+}
+
 .benefit-icon {
   width: 80px;
   height: 80px;
-  margin: 0 auto 1rem;
+  flex-shrink: 0;
+  position: relative;
   transition: transform 0.3s ease;
+}
+
+.benefit-icon::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+  opacity: 0.12;
+  z-index: -1;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Colores de watermark según el ítem */
+.benefit-item-1 .benefit-icon::before { background: #e74c3c; }
+.benefit-item-2 .benefit-icon::before { background: #f39c12; }
+.benefit-item-3 .benefit-icon::before { background: #6c757d; }
+.benefit-item-4 .benefit-icon::before { background: #e74c3c; }
+.benefit-item-5 .benefit-icon::before { background: #f39c12; }
+.benefit-item-6 .benefit-icon::before { background: #6c757d; }
+
+.benefit-circular-item:hover .benefit-icon::before {
+  transform: translate(-50%, -50%) rotate(25deg) scale(1.1);
+  opacity: 0.18;
 }
 
 .benefit-circular-item:hover .benefit-icon {
   transform: translateY(-4px);
+}
+
+.benefit-content {
+  flex: 1;
 }
 
 .benefit-title {
@@ -320,7 +370,8 @@
   }
   
   .benefit-circular-item {
-    max-width: 140px;
+    max-width: 180px;
+    gap: 0.75rem;
   }
   
   .benefit-icon {
@@ -361,7 +412,7 @@
   }
   
   .benefit-circular-item {
-    position: relative;
+    position: relative !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
@@ -369,6 +420,12 @@
     transform: none !important;
     max-width: 280px;
     margin: 0 auto;
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+  
+  .benefit-content {
+    text-align: left;
   }
   
   .benefit-item-1 { order: 0; }
@@ -377,6 +434,225 @@
   .benefit-item-4 { order: 4; }
   .benefit-item-5 { order: 5; }
   .benefit-item-6 { order: 6; }
+}
+
+/* ===========================================
+   TESTIMONIOS - Carrusel Minimalista
+   =========================================== */
+
+.testimonials-carousel-wrapper {
+  position: relative;
+  padding: 2rem 4rem;
+}
+
+.testimonials-carousel {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  padding: 2rem;
+  background: #fafafa;
+  border-radius: 1.5rem;
+  border: 1px solid #f0f0f0;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-meta {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  color: #ddd;
+  font-size: 1.25rem;
+}
+
+.star.filled {
+  color: #f39c12;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-category {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Controles del carrusel */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-control:hover {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  color: white;
+}
+
+.carousel-control.prev {
+  left: 0;
+}
+
+.carousel-control.next {
+  right: 0;
+}
+
+.carousel-control svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  background: #e74c3c;
+  width: 32px;
+  border-radius: 6px;
+}
+
+.indicator:hover {
+  background: #e74c3c;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials-carousel-wrapper {
+    padding: 1rem 3rem;
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .testimonial-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .avatar-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.25rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9375rem;
+  }
+  
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-control svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Print styles */

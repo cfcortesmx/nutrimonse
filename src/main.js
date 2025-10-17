@@ -509,7 +509,104 @@ heroImages.forEach((img) => {
 });
 
 // ==========================================
-// 13. CONSOLE MESSAGE (Opcional)
+// 13. CARRUSEL DE TESTIMONIOS
+// ==========================================
+const testimonialsCarousel = document.getElementById('testimonials-carousel');
+const prevBtn = document.getElementById('testimonial-prev');
+const nextBtn = document.getElementById('testimonial-next');
+const indicators = document.querySelectorAll('.indicator');
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+if (testimonialsCarousel && testimonialCards.length > 0) {
+  let currentIndex = 0;
+  let autoplayInterval;
+  const autoplayDelay = 5000; // 5 segundos
+
+  function showTestimonial(index) {
+    // Remover clase active de todos
+    testimonialCards.forEach(card => card.classList.remove('active'));
+    indicators.forEach(ind => ind.classList.remove('active'));
+
+    // Agregar clase active al actual
+    if (testimonialCards[index]) {
+      testimonialCards[index].classList.add('active');
+    }
+    if (indicators[index]) {
+      indicators[index].classList.add('active');
+    }
+
+    currentIndex = index;
+  }
+
+  function nextTestimonial() {
+    const nextIndex = (currentIndex + 1) % testimonialCards.length;
+    showTestimonial(nextIndex);
+  }
+
+  function prevTestimonial() {
+    const prevIndex = (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
+    showTestimonial(prevIndex);
+  }
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextTestimonial, autoplayDelay);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  function resetAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  // Controles manuales
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevTestimonial();
+      resetAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextTestimonial();
+      resetAutoplay();
+    });
+  }
+
+  // Indicadores
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      showTestimonial(index);
+      resetAutoplay();
+    });
+  });
+
+  // Pausar autoplay al hacer hover
+  testimonialsCarousel.addEventListener('mouseenter', stopAutoplay);
+  testimonialsCarousel.addEventListener('mouseleave', startAutoplay);
+
+  // Iniciar autoplay
+  startAutoplay();
+
+  // Soporte para teclado
+  document.addEventListener('keydown', (e) => {
+    if (testimonialsCarousel && document.activeElement.closest('#testimonios')) {
+      if (e.key === 'ArrowLeft') {
+        prevTestimonial();
+        resetAutoplay();
+      } else if (e.key === 'ArrowRight') {
+        nextTestimonial();
+        resetAutoplay();
+      }
+    }
+  });
+}
+
+// ==========================================
+// 14. CONSOLE MESSAGE (Opcional)
 // ==========================================
 console.log(
   '%c🍓 Nutrimonse',
@@ -521,7 +618,7 @@ console.log(
 );
 
 // ==========================================
-// 14. ERROR HANDLING & FALLBACKS
+// 15. ERROR HANDLING & FALLBACKS
 // ==========================================
 window.addEventListener('error', (e) => {
   console.error('Error detectado:', e.message);
