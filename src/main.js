@@ -372,88 +372,97 @@ faqItems.forEach((item) => {
 });
 
 // ==========================================
-// 8. FORMULARIO DE CONTACTO
+// 8. FORMULARIO DE CONTACTO - WhatsApp HÍBRIDO
 // ==========================================
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
-  const validator = new JustValidate('#contact-form', {
-    errorFieldCssClass: 'border-red-500',
-    errorLabelCssClass: 'text-red-500 text-sm mt-1',
-    successFieldCssClass: 'border-green-500',
-  });
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Obtener valores del formulario
+    const nombre = document.getElementById('nombre').value.trim();
+    const contacto = document.getElementById('contacto').value.trim();
+    const ubicacion = document.getElementById('ubicacion').value;
+    const mensaje = document.getElementById('mensaje').value.trim();
+    
+    // Validación básica
+    if (!nombre || !contacto || !ubicacion || !mensaje) {
+      alert('Por favor completa todos los campos');
+      return;
+    }
+    
+    // Mapear ubicación a texto legible
+    const ubicacionTexto = {
+      'guadalajara': 'Guadalajara',
+      'colima': 'Colima',
+      'virtual': 'Consulta Virtual'
+    };
+    
+    // Construir mensaje mejorado para WhatsApp
+    const whatsappMessage = `Hola, soy *${nombre}* 👋
 
-  validator
-    .addField('#name', [
-      {
-        rule: 'required',
-        errorMessage: 'El nombre es requerido',
-      },
-      {
-        rule: 'minLength',
-        value: 3,
-        errorMessage: 'El nombre debe tener al menos 3 caracteres',
-      },
-    ])
-    .addField('#email', [
-      {
-        rule: 'required',
-        errorMessage: 'El email es requerido',
-      },
-      {
-        rule: 'email',
-        errorMessage: 'Ingresa un email válido',
-      },
-    ])
-    .addField('#phone', [
-      {
-        rule: 'required',
-        errorMessage: 'El teléfono es requerido',
-      },
-    ])
-    .addField('#location', [
-      {
-        rule: 'required',
-        errorMessage: 'Selecciona una ubicación',
-      },
-    ])
-    .onSuccess((event) => {
-      event.preventDefault();
+📱 Mi contacto: ${contacto}
+📍 Ubicación preferida: ${ubicacionTexto[ubicacion] || ubicacion}
 
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
+💬 Mensaje:
+${mensaje}
 
-      console.log('Formulario enviado:', data);
-
-      // Aquí puedes integrar con Formspree, Getform, o Netlify Forms
-      // Ejemplo con Formspree:
-      // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      //   method: 'POST',
-      //   body: formData,
-      //   headers: {
-      //     'Accept': 'application/json'
-      //   }
-      // }).then(response => {
-      //   if (response.ok) {
-      //     MicroModal.show('modal-success');
-      //     contactForm.reset();
-      //   }
-      // });
-
-      // Mostrar mensaje de éxito
-      alert('¡Gracias por tu mensaje! 🎉\n\nNos pondremos en contacto contigo pronto para agendar tu consulta.');
+Me gustaría agendar una consulta de nutrición. ¿Cuándo tienes disponibilidad?`;
+    
+    // Codificar mensaje para URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Número de WhatsApp (reemplaza con el número real)
+    const phoneNumber = '523312345678';
+    
+    // Abrir WhatsApp
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+    
+    // Reset form después de enviar
+    setTimeout(() => {
       contactForm.reset();
-    });
-
-  // Máscara para teléfono
-  const phoneInput = document.getElementById('phone');
-  if (phoneInput) {
-    IMask(phoneInput, {
-      mask: '+{52} 00 0000 0000',
-      lazy: false,
-    });
-  }
+    }, 500);
+    
+    console.log('✅ Formulario enviado a WhatsApp');
+  });
+  
+  console.log('📱 Formulario híbrido WhatsApp inicializado');
 }
+
+// ==========================================
+// 9. FAQ ACCORDION
+// ==========================================
+const faqButtons = document.querySelectorAll('.faq-question');
+
+faqButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const faqItem = button.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const icon = button.querySelector('.faq-icon');
+    const isOpen = !answer.classList.contains('hidden');
+    
+    // Cerrar todos los demás
+    document.querySelectorAll('.faq-answer').forEach(item => {
+      item.classList.add('hidden');
+    });
+    document.querySelectorAll('.faq-icon').forEach(item => {
+      item.classList.remove('rotate-180');
+    });
+    
+    // Toggle el actual
+    if (!isOpen) {
+      answer.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+      
+      // Smooth scroll al item si es necesario
+      setTimeout(() => {
+        faqItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  });
+});
 
 // ==========================================
 // 10. CLIPBOARD (COPIAR DIRECCIÓN)
@@ -641,3 +650,184 @@ window.addEventListener('error', (e) => {
 
 // Export para uso en otros módulos si es necesario
 export { lenis, gsap, ScrollTrigger };
+
+// ==========================================
+// 16. PARALLAX EFFECTS & ENHANCED ANIMATIONS
+// ==========================================
+
+// Solo aplicar parallax en desktop
+if (window.innerWidth > 768) {
+  
+  // 1. Círculos decorativos en "Sobre Especialista" - movimiento lento
+  const decorativeCircles = document.querySelectorAll('.parallax-circle');
+  
+  decorativeCircles.forEach((circle) => {
+    const speed = parseFloat(circle.dataset.speed) || 0.3;
+    
+    gsap.to(circle, {
+      y: -100 * speed,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: circle,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1,
+        invalidateOnRefresh: true
+      }
+    });
+  });
+
+  // 2. SVG Frutas en Testimonios - parallax + respiración
+  const fruits = document.querySelectorAll('.fruit-decoration');
+  
+  fruits.forEach(fruit => {
+    // Parallax
+    gsap.to(fruit, {
+      y: -50,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#testimonios',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 2
+      }
+    });
+    
+    // Animación de respiración (scale pulse)
+    gsap.to(fruit, {
+      scale: 1.05,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+  });
+
+  // 3. Badge de stats en Hero - floating animation
+  const statsBadge = document.querySelector('.stats-badge');
+  if (statsBadge) {
+    gsap.to(statsBadge, {
+      y: -10,
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+  }
+
+  // 4. Círculos flotantes en Value Proposition
+  const floatingCircles = document.querySelectorAll('.floating-circle');
+  
+  floatingCircles.forEach((circle, index) => {
+    gsap.to(circle, {
+      y: 20 + (index * 10),
+      x: 10 - (index * 5),
+      duration: 3 + (index * 0.5),
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      delay: index * 0.3
+    });
+  });
+
+  // 5. Decoración en Contacto - parallax sutil
+  const contactDecorations = document.querySelectorAll('.contact-decoration');
+  
+  contactDecorations.forEach(deco => {
+    gsap.to(deco, {
+      y: -30,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#contacto',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1.5
+      }
+    });
+  });
+}
+
+// ==========================================
+// 17. SCROLL ANIMATIONS (Mobile & Desktop)
+// ==========================================
+
+// Fade in elements on scroll
+gsap.utils.toArray('.fade-in-on-scroll').forEach((element) => {
+  gsap.from(element, {
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 85%',
+      toggleActions: 'play none none reverse'
+    }
+  });
+});
+
+// Stagger animation for grid items
+gsap.utils.toArray('.stagger-container').forEach((container) => {
+  const items = container.querySelectorAll('.stagger-item');
+  
+  if (items.length > 0) {
+    gsap.from(items, {
+      opacity: 0,
+      y: 30,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: container,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  }
+});
+
+// ==========================================
+// 18. ENHANCED HOVERS
+// ==========================================
+
+// Service cards hover enhancement (semicírculo)
+const serviceCards = document.querySelectorAll('.service-benefit-item');
+
+serviceCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    gsap.to(card, {
+      scale: 1.08,
+      rotate: 2,
+      duration: 0.3,
+      ease: 'back.out(1.5)'
+    });
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    gsap.to(card, {
+      scale: 1,
+      rotate: 0,
+      duration: 0.3,
+      ease: 'power2.out'
+    });
+  });
+});
+
+// ==========================================
+// 19. REDUCE MOTION SUPPORT
+// ==========================================
+
+// Detectar preferencia del usuario por movimiento reducido
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  // Desactivar animaciones complejas pero mantener transiciones básicas
+  const animatedElements = document.querySelectorAll('.parallax-circle, .fruit-decoration, .floating-circle');
+  animatedElements.forEach(el => {
+    el.style.transform = 'none';
+    el.style.animation = 'none';
+  });
+  
+  console.log('♿ Modo de movimiento reducido activado');
+} else {
+  console.log('✨ Parallax y animaciones inicializadas');
+}
+

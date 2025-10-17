@@ -26,17 +26,17 @@
   <!-- Google Fonts - Optimizado -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
   
   <!-- PhotoSwipe CSS -->
   
   <!-- Swiper CSS -->
   
   <title>Nutrimonse - Nutrición Especializada en Salud Hormonal | Guadalajara & Colima</title>
-  <script type="module" crossorigin src="/nutrimonse/assets/index-CtMfLlXo.js"></script>
+  <script type="module" crossorigin src="/nutrimonse/assets/index-IngctAwC.js"></script>
   <link rel="modulepreload" crossorigin href="/nutrimonse/assets/vendor-4Ju29Wzt.js">
   <link rel="modulepreload" crossorigin href="/nutrimonse/assets/utils-oZWLPiUs.js">
-  <link rel="stylesheet" crossorigin href="/nutrimonse/assets/index-BFuNkxi5.css">
+  <link rel="stylesheet" crossorigin href="/nutrimonse/assets/index-C89sDat7.css">
 </head>
 <body class="font-sans text-neutral-800 antialiased">
   
@@ -45,14 +45,16 @@
     <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
       <a href="#" class="flex items-center space-x-2">
         <span class="text-2xl">🍓</span>
-        <span class="font-display text-2xl font-bold text-primary-600">Nutrimonse</span>
+        <span class="font-display text-2xl font-bold text-primary-600">NutriMonseMoreno</span>
       </a>
       
       <ul class="hidden md:flex items-center space-x-8">
         <li><a href="#hero" class="hover:text-primary-600 transition-colors">Inicio</a></li>
-        <li><a href="#propuesta-valor" class="hover:text-primary-600 transition-colors">Propuesta de Valor</a></li>
-        <li><a href="#sobre-especialista" class="hover:text-primary-600 transition-colors">Sobre la Especialista</a></li>
-        <li><a href="#areas-especializacion" class="hover:text-primary-600 transition-colors">Áreas de Especialización</a></li>
+        <li><a href="#sobre-especialista" class="hover:text-primary-600 transition-colors">Sobre Mí</a></li>
+        <li><a href="#areas-especializacion" class="hover:text-primary-600 transition-colors">Servicios</a></li>
+        <li><a href="#testimonios" class="hover:text-primary-600 transition-colors">Testimonios</a></li>
+        <li><a href="#ubicaciones" class="hover:text-primary-600 transition-colors">Ubicaciones</a></li>
+        <li><a href="#contacto" class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition-colors">Agendar</a></li>
       </ul>
 
       <!-- Mobile Menu Button -->
@@ -65,9 +67,13 @@
     <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
       <ul class="flex flex-col py-4 px-4 space-y-3">
         <li><a href="#hero" class="block hover:text-primary-600 transition-colors">Inicio</a></li>
-        <li><a href="#propuesta-valor" class="block hover:text-primary-600 transition-colors">Propuesta de Valor</a></li>
-        <li><a href="#sobre-especialista" class="block hover:text-primary-600 transition-colors">Sobre la Especialista</a></li>
-        <li><a href="#areas-especializacion" class="block hover:text-primary-600 transition-colors">Áreas de Especialización</a></li>
+        <li><a href="#sobre-especialista" class="block hover:text-primary-600 transition-colors">Sobre Mí</a></li>
+        <li><a href="#areas-especializacion" class="block hover:text-primary-600 transition-colors">Servicios</a></li>
+        <li><a href="#testimonios" class="block hover:text-primary-600 transition-colors">Testimonios</a></li>
+        <li><a href="#ubicaciones" class="block hover:text-primary-600 transition-colors">Ubicaciones</a></li>
+        <li><a href="#contacto" class="block bg-primary-600 text-white px-4 py-2 rounded-full text-center hover:bg-primary-700 transition-colors">Agendar</a></li>
+      </ul>
+    </div>
       </ul>
     </div>
   </header>
@@ -94,27 +100,66 @@
             Nutrición clínica especializada para mujeres que buscan resultados reales.
           </p>
 
-          <!-- Single Primary CTA with Location Selector -->
-          <div class="hero-cta flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-center lg:justify-start">
-            <!-- Primary CTA -->
-            <a 
-              href="#contacto" 
-              class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 text-white font-bold rounded-full hover:bg-primary-700 transition-all duration-300 hover:shadow-xl hover:shadow-primary-600/30 hover:scale-105 active:scale-95 text-lg"
-              aria-label="Agendar tu consulta de nutrición"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-              Agendar consulta
-            </a>
+          <!-- Primary CTAs - WhatsApp + Teléfono -->
+          <div class="hero-cta flex flex-col items-start justify-center lg:justify-start gap-4">
+            <!-- Botones principales -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <!-- WhatsApp CTA Principal -->
+              <a 
+                href="https://wa.me/523312345678?text=Hola%2C%20quiero%20agendar%20una%20consulta%20de%20nutrici%C3%B3n.%20%C2%BFCu%C3%A1ndo%20tienes%20disponibilidad%3F" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-whatsapp-large"
+                aria-label="Agendar consulta por WhatsApp"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Agendar por WhatsApp
+              </a>
 
-            <!-- Secondary Info - Location -->
+              <!-- Teléfono CTA Secundario -->
+              <a 
+                href="tel:+523312345678" 
+                class="btn-outline-large"
+                aria-label="Llamar para agendar consulta"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                Llamar ahora
+              </a>
+            </div>
+
+            <!-- Ubicaciones info -->
             <div class="flex items-center gap-2 text-neutral-600 text-sm">
               <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
-              <span class="font-medium">Guadalajara y Colima</span>
+              <span class="font-medium">Guadalajara y Colima • Consulta presencial o virtual</span>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="flex items-center gap-4 mt-6">
+              <span class="text-sm font-medium text-neutral-600">Sígueme en:</span>
+              <div class="flex gap-3">
+                <a href="https://instagram.com/nutrimonse" target="_blank" rel="noopener noreferrer" class="social-icon-hero" aria-label="Instagram">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <a href="https://tiktok.com/@nutrimonse" target="_blank" rel="noopener noreferrer" class="social-icon-hero" aria-label="TikTok">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                  </svg>
+                </a>
+                <a href="https://facebook.com/nutrimonse" target="_blank" rel="noopener noreferrer" class="social-icon-hero" aria-label="Facebook">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -186,9 +231,23 @@
   <!-- HERO END -->
 
   <!-- VALUE PROPOSITION START -->
-  <section id="value-proposition" class="py-20 md:py-28 bg-gradient-to-b from-white to-primary-50/30">
-    <div class="container mx-auto px-4">
-      
+  <section id="value-proposition" class="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+    
+    <!-- Decorative floating circles -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <svg class="floating-circle absolute top-20 left-[10%] w-16 h-16 text-primary-100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.15"/>
+      </svg>
+      <svg class="floating-circle absolute top-40 right-[15%] w-24 h-24 text-secondary-100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.12"/>
+      </svg>
+      <svg class="floating-circle absolute bottom-32 left-[20%] w-20 h-20 text-primary-50" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.18"/>
+      </svg>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+
       <!-- Section Header -->
       <div class="text-center mb-16 max-w-3xl mx-auto">
         <h2 class="value-prop-title font-display text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
@@ -271,36 +330,36 @@
   <!-- VALUE PROPOSITION END -->
 
   <!-- SOBRE LA ESPECIALISTA START -->
-  <section id="sobre-especialista" class="py-20 md:py-28 bg-gradient-to-br from-primary-50/20 via-white to-secondary-50/20 relative overflow-hidden">
+  <section id="sobre-especialista" class="py-16 md:py-24 lg:py-32 bg-pattern-medium relative overflow-hidden">
     
     <!-- Decorative SVG Background Elements - Círculos orgánicos -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
       
       <!-- Círculo grande superior izquierda -->
-      <svg class="absolute -top-32 -left-32 w-96 h-96 text-primary-100" viewBox="0 0 200 200">
+      <svg class="parallax-circle absolute -top-32 -left-32 w-96 h-96 text-primary-100" viewBox="0 0 200 200" data-speed="0.3">
         <circle cx="100" cy="100" r="80" fill="currentColor" opacity="0.15"/>
         <circle cx="120" cy="85" r="50" fill="currentColor" opacity="0.08"/>
       </svg>
       
       <!-- Círculo mediano derecha -->
-      <svg class="absolute top-1/4 -right-24 w-80 h-80 text-secondary-100" viewBox="0 0 200 200">
+      <svg class="parallax-circle absolute top-1/4 -right-24 w-80 h-80 text-secondary-100" viewBox="0 0 200 200" data-speed="0.5">
         <circle cx="100" cy="100" r="70" fill="currentColor" opacity="0.12"/>
         <circle cx="85" cy="110" r="45" fill="currentColor" opacity="0.06"/>
       </svg>
       
       <!-- Forma orgánica inferior izquierda -->
-      <svg class="absolute bottom-20 left-1/4 w-64 h-64 text-primary-50" viewBox="0 0 200 200">
+      <svg class="parallax-circle absolute bottom-20 left-1/4 w-64 h-64 text-primary-50" viewBox="0 0 200 200" data-speed="0.4">
         <ellipse cx="100" cy="100" rx="60" ry="80" fill="currentColor" opacity="0.1" transform="rotate(-25 100 100)"/>
         <ellipse cx="110" cy="90" rx="40" ry="55" fill="currentColor" opacity="0.05" transform="rotate(-25 110 90)"/>
       </svg>
       
       <!-- Círculo pequeño superior derecha -->
-      <svg class="absolute top-1/3 right-1/4 w-48 h-48 text-secondary-200" viewBox="0 0 200 200">
+      <svg class="parallax-circle absolute top-1/3 right-1/4 w-48 h-48 text-secondary-200" viewBox="0 0 200 200" data-speed="0.6">
         <circle cx="100" cy="100" r="50" fill="currentColor" opacity="0.12"/>
       </svg>
       
       <!-- Forma decorativa centro -->
-      <svg class="absolute top-1/2 left-1/3 w-56 h-56 text-primary-100" viewBox="0 0 200 200">
+      <svg class="parallax-circle absolute top-1/2 left-1/3 w-56 h-56 text-primary-100" viewBox="0 0 200 200" data-speed="0.35">
         <ellipse cx="100" cy="100" rx="55" ry="70" fill="currentColor" opacity="0.08" transform="rotate(15 100 100)"/>
       </svg>
       
@@ -351,42 +410,14 @@
               <!-- Decorative background -->
               <div class="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl -z-10"></div>
               
-              <!-- Foto de la especialista o placeholder ilustrativo -->
-              <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary-50 to-secondary-50">
-                <!-- Placeholder ilustrativo mientras no hay foto -->
-                <div class="aspect-[3/4] flex items-center justify-center p-12">
-                  <svg class="w-full h-full text-primary-300 opacity-60" viewBox="0 0 400 500" fill="none">
-                    <!-- Silueta femenina profesional -->
-                    <circle cx="200" cy="120" r="70" fill="currentColor" opacity="0.3"/>
-                    <ellipse cx="200" cy="350" rx="120" ry="150" fill="currentColor" opacity="0.2"/>
-                    
-                    <!-- Elementos decorativos de salud -->
-                    <g opacity="0.4">
-                      <!-- Corazón -->
-                      <path d="M100,180 C100,160 80,140 60,140 C40,140 20,160 20,180 C20,200 40,220 100,260 C160,220 180,200 180,180 C180,160 160,140 140,140 C120,140 100,160 100,180 Z" fill="currentColor" transform="translate(50, 20) scale(0.6)"/>
-                      
-                      <!-- Hoja (nutrición) -->
-                      <path d="M300,200 Q320,180 340,200 Q360,220 340,240 Q320,260 300,240 Q280,220 300,200 Z M300,200 Q310,220 320,240" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
-                    </g>
-                    
-                    <!-- Texto placeholder -->
-                    <text x="200" y="450" font-family="Arial" font-size="18" fill="currentColor" text-anchor="middle" opacity="0.5">
-                      Monserrat Moreno
-                    </text>
-                    <text x="200" y="475" font-family="Arial" font-size="14" fill="currentColor" text-anchor="middle" opacity="0.4">
-                      Nutrióloga Clínica
-                    </text>
-                  </svg>
-                </div>
-                
-                <!-- Descomentar cuando tengas la foto real:
+              <!-- Foto de la especialista -->
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/nutrimonse/assets/especialista-monserrat.jpg" 
+                  src="assets/nutriologa-sobre-mi.png" 
                   alt="Monserrat Moreno - Nutrióloga Clínica Especialista en Salud Hormonal"
-                  class="w-full h-auto object-cover"
+                  class="w-full h-full object-cover aspect-[3/4]"
                   loading="lazy"
-                >
-                -->
+                />
               </div>
               
               <!-- Badge flotante con cédula -->
@@ -520,8 +551,39 @@
   <!-- SOBRE LA ESPECIALISTA END -->
 
   <!-- ÁREAS DE ESPECIALIZACIÓN START -->
-  <section id="areas-especializacion" class="py-20 md:py-32 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
-    <div class="container mx-auto px-4">
+  <section id="areas-especializacion" class="py-16 md:py-24 lg:py-32 bg-pattern-light relative overflow-hidden">
+    
+    <!-- Decorative organic shape - top right -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <svg class="absolute -top-20 -right-20 w-80 h-80 text-secondary-100" viewBox="0 0 200 200">
+        <ellipse cx="100" cy="100" rx="70" ry="90" fill="currentColor" opacity="0.12" transform="rotate(25 100 100)"/>
+        <ellipse cx="110" cy="95" rx="50" ry="65" fill="currentColor" opacity="0.08" transform="rotate(25 110 95)"/>
+      </svg>
+      
+      <!-- Scattered small circles (seeds) -->
+      <svg class="absolute top-1/4 left-[15%] w-3 h-3 text-secondary-200" viewBox="0 0 10 10">
+        <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.2"/>
+      </svg>
+      <svg class="absolute top-1/3 left-[25%] w-2 h-2 text-primary-200" viewBox="0 0 10 10">
+        <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.15"/>
+      </svg>
+      <svg class="absolute top-[45%] right-[20%] w-3 h-3 text-secondary-200" viewBox="0 0 10 10">
+        <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.18"/>
+      </svg>
+      <svg class="absolute bottom-1/3 left-[30%] w-2 h-2 text-primary-200" viewBox="0 0 10 10">
+        <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.2"/>
+      </svg>
+      <svg class="absolute bottom-1/4 right-[35%] w-3 h-3 text-secondary-200" viewBox="0 0 10 10">
+        <circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.15"/>
+      </svg>
+      
+      <!-- Wave transition from previous section -->
+      <svg class="absolute top-0 left-0 w-full h-24 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,40 C300,80 500,20 800,60 L1200,60 L1200,0 L0,0 Z" fill="currentColor" opacity="0.8"/>
+      </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
       
       <!-- Título de sección -->
       <div class="text-center mb-20">
@@ -535,25 +597,22 @@
           
           <!-- Imagen Central -->
           <div class="central-image">
-            <div class="relative w-64 h-64 md:w-80 md:h-80">
-              <div class="w-full h-full rounded-full overflow-hidden shadow-2xl relative border-4 border-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=600&fit=crop" 
-                  alt="Nutrición saludable"
-                  class="w-full h-full object-cover"
-                />
-                <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10"></div>
-              </div>
-              <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full bg-gradient-to-br from-primary-100/40 to-secondary-100/40 blur-3xl"></div>
+            <div class="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
+              <img 
+                src="assets/nutriologa-areas.png" 
+                alt="Nutrióloga Montse - Especialista en salud hormonal"
+                class="w-full h-full object-contain"
+              />
             </div>
           </div>
 
           <!-- Item 1: Salud Hormonal (Arriba Izquierda) -->
           <div class="benefit-circular-item benefit-item-1">
             <svg class="benefit-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 54C32 54 12 40 12 26C12 20 16 16 22 16C26 16 29 18 32 22C35 18 38 16 42 16C48 16 52 20 52 26C52 40 32 54 32 54Z" 
-                    stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" class="text-primary-600"/>
-              <path d="M28 28L32 32L38 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary-400"/>
+              <circle cx="32" cy="32" r="28" fill="#e74c64" fill-opacity="0.1"/>
+              <circle cx="32" cy="32" r="20" fill="#e74c64" fill-opacity="0.2"/>
+              <circle cx="32" cy="32" r="12" fill="#e74c64"/>
+              <path d="M32 20v24M20 32h24" stroke="white" stroke-width="3" stroke-linecap="round"/>
             </svg>
             <div class="benefit-content">
               <h3 class="benefit-title">Salud Hormonal</h3>
@@ -564,12 +623,10 @@
           <!-- Item 2: Control de Peso (Medio Izquierda) -->
           <div class="benefit-circular-item benefit-item-2">
             <svg class="benefit-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="3" class="text-secondary-600"/>
-              <line x1="32" y1="12" x2="32" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="text-secondary-600"/>
-              <line x1="32" y1="46" x2="32" y2="52" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="text-secondary-600"/>
-              <line x1="12" y1="32" x2="18" y2="32" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="text-secondary-600"/>
-              <line x1="46" y1="32" x2="52" y2="32" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="text-secondary-600"/>
-              <circle cx="32" cy="32" r="4" fill="currentColor" class="text-secondary-500"/>
+              <rect x="8" y="28" width="48" height="8" rx="4" fill="#22c55e" fill-opacity="0.2"/>
+              <rect x="16" y="20" width="32" height="24" rx="4" fill="#22c55e" fill-opacity="0.3"/>
+              <circle cx="32" cy="32" r="8" fill="#22c55e"/>
+              <path d="M32 26v12M26 32h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
             <div class="benefit-content">
               <h3 class="benefit-title">Control de Peso</h3>
@@ -580,11 +637,13 @@
           <!-- Item 3: Nutrición Clínica (Abajo Izquierda) -->
           <div class="benefit-circular-item benefit-item-3">
             <svg class="benefit-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="16" y="10" width="32" height="44" rx="2" stroke="currentColor" stroke-width="3" class="text-neutral-700"/>
-              <line x1="24" y1="22" x2="40" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-neutral-600"/>
-              <line x1="24" y1="30" x2="40" y2="30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-neutral-600"/>
-              <line x1="24" y1="38" x2="34" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="text-neutral-600"/>
-              <path d="M32 14L34 16L38 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary-500"/>
+              <rect x="12" y="12" width="40" height="40" rx="6" fill="#e74c64" fill-opacity="0.1"/>
+              <rect x="18" y="18" width="28" height="28" rx="4" fill="#e74c64" fill-opacity="0.2"/>
+              <path d="M32 24v16M24 32h16" stroke="#e74c64" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="26" cy="26" r="2" fill="#e74c64" fill-opacity="0.5"/>
+              <circle cx="38" cy="26" r="2" fill="#e74c64" fill-opacity="0.5"/>
+              <circle cx="26" cy="38" r="2" fill="#e74c64" fill-opacity="0.5"/>
+              <circle cx="38" cy="38" r="2" fill="#e74c64" fill-opacity="0.5"/>
             </svg>
             <div class="benefit-content">
               <h3 class="benefit-title">Nutrición Clínica</h3>
@@ -595,11 +654,12 @@
           <!-- Item 4: Nutrición Infantil (Arriba Derecha) -->
           <div class="benefit-circular-item benefit-item-4">
             <svg class="benefit-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="22" r="8" stroke="currentColor" stroke-width="3" class="text-primary-500"/>
-              <circle cx="28" cy="20" r="1.5" fill="currentColor" class="text-primary-600"/>
-              <circle cx="36" cy="20" r="1.5" fill="currentColor" class="text-primary-600"/>
-              <path d="M28 25C28 25 30 27 32 27C34 27 36 25 36 25" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="text-primary-600"/>
-              <path d="M20 36C20 30 25 26 32 26C39 26 44 30 44 36V48C44 50 42 52 40 52H24C22 52 20 50 20 48V36Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="text-primary-500"/>
+              <circle cx="32" cy="24" r="10" fill="#22c55e" fill-opacity="0.2"/>
+              <circle cx="32" cy="24" r="6" fill="#22c55e" fill-opacity="0.4"/>
+              <circle cx="32" cy="24" r="3" fill="#22c55e"/>
+              <path d="M32 34v10" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+              <path d="M22 44h20" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+              <path d="M26 50h12" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
             </svg>
             <div class="benefit-content">
               <h3 class="benefit-title">Nutrición Infantil</h3>
@@ -610,14 +670,11 @@
           <!-- Item 5: Planes Personalizados (Medio Derecha) -->
           <div class="benefit-circular-item benefit-item-5">
             <svg class="benefit-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="14" y="16" width="36" height="40" rx="2" stroke="currentColor" stroke-width="3" class="text-secondary-600"/>
-              <path d="M24 10V16M40 10V16" stroke="currentColor" stroke-width="3" stroke-linecap="round" class="text-secondary-600"/>
-              <line x1="14" y1="26" x2="50" y2="26" stroke="currentColor" stroke-width="3" class="text-secondary-600"/>
-              <circle cx="24" cy="36" r="2" fill="currentColor" class="text-secondary-500"/>
-              <circle cx="32" cy="36" r="2" fill="currentColor" class="text-secondary-500"/>
-              <circle cx="40" cy="36" r="2" fill="currentColor" class="text-secondary-500"/>
-              <circle cx="24" cy="44" r="2" fill="currentColor" class="text-secondary-500"/>
-              <circle cx="32" cy="44" r="2" fill="currentColor" class="text-primary-500"/>
+              <path d="M32 8L44 20L32 32L20 20L32 8Z" fill="#e74c64" fill-opacity="0.3"/>
+              <path d="M32 32L44 44L32 56L20 44L32 32Z" fill="#e74c64" fill-opacity="0.3"/>
+              <path d="M8 32L20 20L32 32L20 44L8 32Z" fill="#e74c64" fill-opacity="0.2"/>
+              <path d="M56 32L44 20L32 32L44 44L56 32Z" fill="#e74c64" fill-opacity="0.2"/>
+              <circle cx="32" cy="32" r="6" fill="#e74c64"/>
             </svg>
             <div class="benefit-content">
               <h3 class="benefit-title">Planes Personalizados</h3>
@@ -628,12 +685,11 @@
           <!-- Item 6: Seguimiento Continuo (Abajo Derecha) -->
           <div class="benefit-circular-item benefit-item-6">
             <svg class="benefit-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 48L20 38L28 42L36 28L44 34L52 22" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-neutral-600"/>
-              <circle cx="20" cy="38" r="3" fill="currentColor" class="text-primary-500"/>
-              <circle cx="28" cy="42" r="3" fill="currentColor" class="text-primary-500"/>
-              <circle cx="36" cy="28" r="3" fill="currentColor" class="text-secondary-500"/>
-              <circle cx="44" cy="34" r="3" fill="currentColor" class="text-secondary-500"/>
-              <path d="M46 16L52 22L46 22L46 16Z" fill="currentColor" class="text-primary-500"/>
+              <path d="M8 44Q18 44 22 32T32 20Q38 20 42 32T56 44" stroke="#22c55e" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <circle cx="22" cy="32" r="4" fill="#22c55e" fill-opacity="0.4"/>
+              <circle cx="32" cy="20" r="4" fill="#22c55e" fill-opacity="0.6"/>
+              <circle cx="42" cy="32" r="4" fill="#22c55e" fill-opacity="0.4"/>
+              <circle cx="32" cy="20" r="2" fill="#22c55e"/>
             </svg>
             <div class="benefit-content">
               <h3 class="benefit-title">Seguimiento Continuo</h3>
@@ -649,30 +705,30 @@
   <!-- ÁREAS DE ESPECIALIZACIÓN END -->
 
   <!-- TESTIMONIOS START -->
-  <section id="testimonios" class="py-20 md:py-32 bg-gradient-to-br from-primary-100/40 via-secondary-50/30 to-white relative overflow-hidden">
+  <section id="testimonios" class="py-16 md:py-24 lg:py-32 bg-pattern-accent relative overflow-hidden">
     
     <!-- Decorative Icons - Aguacate y Fresa -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute inset-0 pointer-events-none z-0">
       <!-- Aguacate superior derecha -->
       <img 
         src="/nutrimonse/assets/avocado.svg" 
         alt="" 
-        class="absolute top-8 right-8 w-56 h-56 opacity-50 transform rotate-12"
+        class="fruit-decoration absolute top-8 right-8 w-72 h-72 transform rotate-12"
+        style="opacity: 0.25;"
         aria-hidden="true"
-        loading="lazy"
-        width="224"
-        height="224"
+        width="288"
+        height="288"
       />
       
       <!-- Fresa inferior izquierda -->
       <img 
         src="/nutrimonse/assets/strawberry.svg" 
         alt="" 
-        class="absolute bottom-8 left-8 w-48 h-48 opacity-50 transform -rotate-15"
+        class="fruit-decoration absolute bottom-8 left-8 w-64 h-64 transform -rotate-15"
+        style="opacity: 0.25;"
         aria-hidden="true"
-        loading="lazy"
-        width="192"
-        height="192"
+        width="256"
+        height="256"
       />
     </div>
     
@@ -856,45 +912,795 @@
   </section>
   <!-- TESTIMONIOS END -->
 
+  <!-- UBICACIONES Y HORARIOS START -->
+  <section id="ubicaciones" class="py-16 md:py-24 lg:py-32 bg-white relative overflow-hidden">
+    
+    <!-- Subtle dot pattern decoration -->
+    <div class="absolute inset-0 pointer-events-none opacity-30">
+      <svg class="absolute top-10 right-10 w-24 h-24" viewBox="0 0 100 100">
+        <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1" fill="#d1d5db" opacity="0.4"/>
+        </pattern>
+        <rect width="100" height="100" fill="url(#dots)"/>
+      </svg>
+      
+      <!-- Location pin decorative icons -->
+      <svg class="absolute top-20 left-10 w-16 h-16 text-primary-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" opacity="0.1"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" opacity="0.15"/>
+      </svg>
+      
+      <svg class="absolute bottom-32 right-20 w-20 h-20 text-secondary-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" opacity="0.08"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" opacity="0.12"/>
+      </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <!-- Título de sección -->
+      <div class="text-center mb-16">
+        <h2 class="section-title">¿Dónde te atiendo?</h2>
+        <p class="section-subtitle max-w-2xl mx-auto">Consultas presenciales en Guadalajara y Colima</p>
+      </div>
+
+      <!-- Grid de Ubicaciones -->
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto mb-16">
+        
+        <!-- Card Guadalajara -->
+        <div class="location-card bg-gradient-to-br from-white to-secondary-50/20 border border-secondary-200/50 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+          
+          <!-- Título de ubicación -->
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3 flex items-center gap-2">
+              <div class="w-10 h-10 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <span>Guadalajara, Jalisco</span>
+            </h3>
+            <a href="https://maps.google.com/?q=Av.+Aviación+Guadalajara" target="_blank" rel="noopener noreferrer" class="text-neutral-600 hover:text-secondary-600 transition-colors flex items-center gap-1 text-sm group/link ml-12">
+              <span>Av. Aviación, Guadalajara</span>
+              <svg class="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Horarios -->
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+              <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-neutral-900">Lunes a Viernes</p>
+                <p class="text-neutral-600 text-sm">11:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+              <div class="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-neutral-900">Sábados</p>
+                <p class="text-neutral-600 text-sm">10:00 AM - 2:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Colima -->
+        <div class="location-card bg-gradient-to-br from-white to-primary-50/20 border border-primary-200/50 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+          
+          <!-- Título de ubicación -->
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3 flex items-center gap-2">
+              <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <span>Colima, Colima</span>
+            </h3>
+            <a href="https://maps.google.com/?q=Residencial+Esmeralda+Norte+Colima" target="_blank" rel="noopener noreferrer" class="text-neutral-600 hover:text-primary-600 transition-colors flex items-center gap-1 text-sm group/link ml-12">
+              <span>Residencial Esmeralda Norte, Colima</span>
+              <svg class="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Horarios con advertencia -->
+          <div class="space-y-4">
+            <div class="flex items-start gap-3 p-3 bg-primary-50/40 rounded-lg border border-primary-200/30">
+              <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-neutral-900">Solo 2 días al mes</p>
+                <p class="text-neutral-600 text-sm">10:00 AM - 9:00 PM</p>
+                <p class="text-primary-600 text-xs font-medium mt-1 italic">
+                  Normalmente los primeros días del mes
+                </p>
+              </div>
+            </div>
+            
+            <!-- Nota de anticipación -->
+            <div class="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+              <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-neutral-900">Agenda con anticipación</p>
+                <p class="text-xs text-neutral-600">Los espacios se agotan rápidamente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA único - WhatsApp -->
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-neutral-600 mb-6 text-base">
+          ¿Dudas sobre disponibilidad o prefieres consulta virtual?
+        </p>
+        <a 
+          href="https://wa.me/523312345678?text=Hola,%20me%20gustaría%20consultar%20disponibilidad%20para%20una%20cita" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn-whatsapp"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Consultar disponibilidad por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- UBICACIONES Y HORARIOS END -->
+
+  <!-- Sección Redes Sociales - Contenido Diario -->
+  <section class="py-16 bg-gradient-to-br from-primary-50/30 via-white to-secondary-50/30">
+    <div class="container mx-auto px-4 text-center">
+      <!-- Encabezado -->
+      <div class="max-w-2xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+          Contenido diario sobre salud hormonal
+        </h2>
+        <p class="text-lg text-neutral-600">
+          Recetas saludables, tips de nutrición y educación hormonal en mis redes sociales
+        </p>
+      </div>
+
+      <!-- Grid de Redes Sociales -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <!-- Instagram -->
+        <a 
+          href="https://instagram.com/nutrimonse" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-neutral-100 group"
+        >
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-bold text-neutral-900">Instagram</p>
+            <p class="text-sm text-neutral-600">@nutrimonse</p>
+          </div>
+          <p class="text-xs text-neutral-500">Recetas & Tips</p>
+        </a>
+
+        <!-- TikTok -->
+        <a 
+          href="https://tiktok.com/@nutrimonse" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-neutral-100 group"
+        >
+          <div class="w-16 h-16 rounded-full bg-neutral-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-bold text-neutral-900">TikTok</p>
+            <p class="text-sm text-neutral-600">@nutrimonse</p>
+          </div>
+          <p class="text-xs text-neutral-500">Videos Educativos</p>
+        </a>
+
+        <!-- Facebook -->
+        <a 
+          href="https://facebook.com/nutrimonse" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-neutral-100 group"
+        >
+          <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-bold text-neutral-900">Facebook</p>
+            <p class="text-sm text-neutral-600">Nutrimonse</p>
+          </div>
+          <p class="text-xs text-neutral-500">Comunidad</p>
+        </a>
+
+        <!-- LinkedIn -->
+        <a 
+          href="https://linkedin.com/company/nutrimonse" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-neutral-100 group"
+        >
+          <div class="w-16 h-16 rounded-full bg-blue-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-bold text-neutral-900">LinkedIn</p>
+            <p class="text-sm text-neutral-600">Nutrimonse</p>
+          </div>
+          <p class="text-xs text-neutral-500">Red Profesional</p>
+        </a>
+      </div>
+
+      <!-- CTA Final -->
+      <div class="mt-10">
+        <p class="text-neutral-600 text-sm">
+          Únete a más de <strong class="text-primary-600">5,000 personas</strong> que siguen contenido sobre nutrición y salud hormonal
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Fin Sección Redes Sociales -->
+
+  <!-- CTA FINAL + FORMULARIO START -->
+  <section id="contacto" class="py-16 md:py-24 lg:py-32 bg-pattern-medium relative overflow-hidden">
+    
+    <!-- Decorative elements mirroring "Sobre Especialista" -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      
+      <!-- Círculo grande superior derecha -->
+      <svg class="contact-decoration absolute -top-24 -right-24 w-80 h-80 text-secondary-100" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="70" fill="currentColor" opacity="0.12"/>
+        <circle cx="85" cy="110" r="45" fill="currentColor" opacity="0.06"/>
+      </svg>
+      
+      <!-- Forma orgánica inferior derecha -->
+      <svg class="contact-decoration absolute bottom-32 right-1/4 w-64 h-64 text-primary-50" viewBox="0 0 200 200">
+        <ellipse cx="100" cy="100" rx="60" ry="75" fill="currentColor" opacity="0.1" transform="rotate(35 100 100)"/>
+      </svg>
+      
+      <!-- Mini contact icons scattered -->
+      <svg class="absolute top-1/4 left-[15%] w-8 h-8 text-primary-200" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" opacity="0.08"/>
+      </svg>
+      
+      <svg class="absolute top-1/3 right-[12%] w-7 h-7 text-secondary-200" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" opacity="0.08"/>
+      </svg>
+      
+      <svg class="absolute bottom-1/3 left-[20%] w-8 h-8 text-primary-200" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" opacity="0.08"/>
+      </svg>
+      
+      <!-- Círculo mediano izquierda -->
+      <svg class="contact-decoration absolute top-1/2 -left-20 w-56 h-56 text-secondary-100" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="60" fill="currentColor" opacity="0.1"/>
+      </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <!-- Header -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+          Da el primer paso hacia tu <span class="text-primary-600">transformación</span>
+        </h2>
+        <p class="text-lg md:text-xl text-neutral-600 leading-relaxed">
+          Agenda tu primera consulta y comienza a recuperar tu bienestar. Te acompaño en cada paso del camino.
+        </p>
+      </div>
+
+      <!-- Grid 2 columnas -->
+      <div class="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+        
+        <!-- Columna Izquierda: Beneficios (2/5) -->
+        <div class="lg:col-span-2 space-y-8">
+          
+          <!-- Lista de beneficios -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold text-neutral-900 mb-6">¿Qué esperar en tu primera consulta?</h3>
+            
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <p class="text-neutral-700">Análisis completo de tu situación actual y objetivos</p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <p class="text-neutral-700">Plan nutricional 100% personalizado a tu estilo de vida</p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <p class="text-neutral-700">Seguimiento continuo y acompañamiento por WhatsApp</p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 bg-secondary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <p class="text-neutral-700">Resultados visibles desde el primer mes</p>
+            </div>
+          </div>
+
+          <!-- Separador -->
+          <div class="border-t border-neutral-200 pt-8">
+            
+            <!-- WhatsApp alternativo -->
+            <div class="space-y-4">
+              <p class="text-sm font-semibold text-neutral-700">¿Prefieres hablar directamente?</p>
+              <a 
+                href="https://wa.me/523312345678?text=Hola%20Monserrat,%20me%20gustaría%20agendar%20una%20consulta" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="btn-outline"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Escribir por WhatsApp
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario (3/5) -->
+        <div class="lg:col-span-3">
+          <div class="bg-white border border-neutral-200 rounded-2xl p-8 shadow-2xl">
+            
+            <form id="contact-form" class="space-y-6">
+              
+              <!-- Nombre completo -->
+              <div>
+                <label for="nombre" class="block text-sm font-semibold text-neutral-700 mb-2">
+                  Nombre completo
+                </label>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  name="nombre" 
+                  required
+                  class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                  placeholder="Ej: María González"
+                >
+              </div>
+
+              <!-- Teléfono o Email -->
+              <div>
+                <label for="contacto" class="block text-sm font-semibold text-neutral-700 mb-2">
+                  Teléfono o Email
+                </label>
+                <input 
+                  type="text" 
+                  id="contacto" 
+                  name="contacto" 
+                  required
+                  class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+                  placeholder="Ej: 33 1234 5678 o maria@email.com"
+                >
+              </div>
+
+              <!-- Ubicación preferida -->
+              <div>
+                <label for="ubicacion" class="block text-sm font-semibold text-neutral-700 mb-2">
+                  ¿Dónde prefieres tu cita?
+                </label>
+                <select 
+                  id="ubicacion" 
+                  name="ubicacion" 
+                  required
+                  class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all bg-white"
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="guadalajara">Guadalajara</option>
+                  <option value="colima">Colima</option>
+                  <option value="virtual">Consulta Virtual</option>
+                </select>
+              </div>
+
+              <!-- Mensaje -->
+              <div>
+                <label for="mensaje" class="block text-sm font-semibold text-neutral-700 mb-2">
+                  Cuéntame brevemente qué te gustaría trabajar
+                </label>
+                <textarea 
+                  id="mensaje" 
+                  name="mensaje" 
+                  rows="4" 
+                  required
+                  class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
+                  placeholder="Ej: Quiero regular mis hormonas y mejorar mi relación con la comida..."
+                ></textarea>
+              </div>
+
+              <!-- Botón submit - Ahora envía por WhatsApp -->
+              <button 
+                type="submit"
+                class="btn-whatsapp-large w-full"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Continuar por WhatsApp
+              </button>
+
+            </form>
+
+            <!-- Micro-copy de confianza -->
+            <div class="mt-6 pt-6 border-t border-neutral-200">
+              <div class="flex flex-col items-center gap-3">
+                <div class="flex items-center gap-2 text-xs text-neutral-500">
+                  <svg class="w-4 h-4 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                  </svg>
+                  <span>Respondo personalmente. Tu información está protegida.</span>
+                </div>
+                <p class="text-xs text-center text-neutral-400">
+                  Al enviar, se abrirá WhatsApp con tu mensaje prellenado para agendar más rápido
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- CTA FINAL + FORMULARIO END -->
+
+  <!-- FAQ START -->
+  <section id="faq" class="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
+    
+    <!-- Subtle question mark pattern decoration -->
+    <div class="absolute inset-0 pointer-events-none opacity-20">
+      <!-- Question marks scattered -->
+      <svg class="absolute top-20 right-[15%] w-16 h-16 text-primary-200" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-7v2h2v-2h-2zm2-1.645A3.502 3.502 0 0012 6.5a3.501 3.501 0 00-3.433 2.813l1.962.393A1.5 1.5 0 1112 11.5a1 1 0 00-1 1V14h2v-.645z" opacity="0.08"/>
+      </svg>
+      
+      <svg class="absolute top-1/3 left-[10%] w-12 h-12 text-secondary-200" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-7v2h2v-2h-2zm2-1.645A3.502 3.502 0 0012 6.5a3.501 3.501 0 00-3.433 2.813l1.962.393A1.5 1.5 0 1112 11.5a1 1 0 00-1 1V14h2v-.645z" opacity="0.1"/>
+      </svg>
+      
+      <svg class="absolute bottom-1/4 right-[20%] w-14 h-14 text-primary-200" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-7v2h2v-2h-2zm2-1.645A3.502 3.502 0 0012 6.5a3.501 3.501 0 00-3.433 2.813l1.962.393A1.5 1.5 0 1112 11.5a1 1 0 00-1 1V14h2v-.645z" opacity="0.06"/>
+      </svg>
+      
+      <!-- Dot pattern background -->
+      <svg class="absolute bottom-10 left-10 w-32 h-32" viewBox="0 0 100 100">
+        <pattern id="faq-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.5" fill="#d1d5db" opacity="0.3"/>
+        </pattern>
+        <rect width="100" height="100" fill="url(#faq-dots)"/>
+      </svg>
+      
+      <!-- Subtle circles -->
+      <svg class="absolute top-1/2 right-[8%] w-20 h-20 text-secondary-100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="35" fill="currentColor" opacity="0.12"/>
+      </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      
+      <!-- Header -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <p class="section-subtitle">Resuelve tus dudas antes de agendar tu consulta</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="max-w-3xl mx-auto space-y-4">
+        
+        <!-- FAQ Item 1 -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="1">
+            <span class="font-semibold text-neutral-900 pr-4">¿Cuánto dura la consulta?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>La primera consulta dura aproximadamente <strong>60-90 minutos</strong>, ya que realizamos un análisis completo de tu situación, historial y objetivos. Las consultas de seguimiento son más breves, de <strong>30-45 minutos</strong>.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 - NUEVA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="2">
+            <span class="font-semibold text-neutral-900 pr-4">¿Pueden ayudarme con problemas hormonales como SOP, ciclos irregulares o menopausia?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Sí, <strong>es mi especialidad principal</strong>. Trabajo con Síndrome de Ovario Poliquístico (SOP), irregularidades menstruales, hipotiroidismo, hipertiroidismo, menopausia, perimenopausia, endometriosis y desbalances hormonales. Si tienes síntomas como fatiga, cambios de peso inexplicables, problemas de piel o estás buscando embarazo, puedo ayudarte con un plan personalizado de nutrición y suplementación.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 - MEJORADA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="3">
+            <span class="font-semibold text-neutral-900 pr-4">¿Necesito llevar estudios previos?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>No es obligatorio, pero si tienes <strong>análisis clínicos recientes</strong> (laboratorios generales, perfil hormonal, tiroides, glucosa, colesterol, función hepática) tráelos o envíamelos antes de la consulta. Son especialmente importantes si trabajaremos con salud hormonal, hígado graso o hipertensión, ya que nos permiten diseñar un plan más preciso y medir tu progreso.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 - NUEVA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="4">
+            <span class="font-semibold text-neutral-900 pr-4">¿Tratan condiciones médicas como hígado graso, hipertensión o gastritis?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Sí, ofrezco <strong>nutrición clínica especializada</strong> para manejo de hígado graso, hipertensión, enfermedades gástricas (gastritis, colitis), sobrepeso y obesidad. Varios pacientes han mejorado significativamente sus parámetros bioquímicos y análisis clínicos con el plan nutricional adecuado.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 - MEJORADA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="5">
+            <span class="font-semibold text-neutral-900 pr-4">¿Desde qué edad atienden en nutrición pediátrica?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Atiendo desde los <strong>6 meses de edad</strong>, iniciando con alimentación complementaria. Acompaño el crecimiento saludable de tus hijos, manejo de alergias e intolerancias alimentarias, y creación de hábitos saludables desde pequeños. También ofrezco <strong>planes familiares completos</strong> para que toda la familia coma mejor.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 - MEJORADA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="6">
+            <span class="font-semibold text-neutral-900 pr-4">¿Trabajan con parejas para fertilidad?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Sí, es una de mis áreas principales. Ofrezco <strong>nutrición y suplementación especializada para fertilidad</strong> tanto para hombres como para mujeres. Varias parejas han logrado su embarazo después de trabajar con un plan integral que optimiza la salud reproductiva de ambos.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 - MEJORADA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="7">
+            <span class="font-semibold text-neutral-900 pr-4">¿Ofrecen seguimiento en línea y entre consultas?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Sí, todas mis consultas incluyen <strong>apoyo continuo vía WhatsApp</strong> y acceso a software nutricional profesional. Puedes elegir consultas presenciales en Guadalajara o Colima, completamente virtuales, o un modelo híbrido. El seguimiento digital es ideal si viajas frecuentemente o prefieres la comodidad de tu casa.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 8 - NUEVA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="8">
+            <span class="font-semibold text-neutral-900 pr-4">¿Puedo perder peso sin dietas extremas o pasar hambre?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Absolutamente. Mi enfoque no es de "dietas temporales" sino de <strong>resultados sostenibles</strong>. Te ayudo a perder grasa corporal, aumentar masa muscular y mejorar tu composición corporal sin hambre ni restricciones extremas. Además, incluyo <strong>entrenamientos personalizados</strong> (pesas en gym o casa) como parte del plan.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 9 - MEJORADA -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="9">
+            <span class="font-semibold text-neutral-900 pr-4">¿Cuándo empezaré a ver resultados?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Los <strong>primeros cambios se sienten en 2-4 semanas</strong>: más energía, mejor digestión, regulación de antojos y mejor relación con la comida. Los resultados físicos (pérdida de grasa, composición corporal) son progresivos. En condiciones hormonales, la mejora de síntomas puede tomar 2-3 meses. Los resultados sostenibles se construyen con constancia.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 10 -->
+        <div class="faq-item bg-white border border-neutral-200 rounded-xl overflow-hidden">
+          <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-neutral-50 transition-colors" data-faq="10">
+            <span class="font-semibold text-neutral-900 pr-4">¿Qué formas de pago aceptan y hay paquetes?</span>
+            <svg class="faq-icon w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5 text-neutral-600">
+            <p>Acepto <strong>efectivo, transferencia bancaria y tarjetas de crédito/débito</strong>. El pago se realiza al momento de la consulta. Pregunta por <strong>paquetes con descuento</strong> para consultas de seguimiento que te permiten ahorrar y comprometerte con tu proceso.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA adicional -->
+      <div class="text-center mt-12">
+        <p class="text-neutral-600 mb-4">¿Tienes alguna otra pregunta?</p>
+        <a 
+          href="https://wa.me/523312345678?text=Hola,%20tengo%20una%20pregunta%20sobre%20las%20consultas" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn-outline"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Pregunta por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- FAQ END -->
+
   <!-- Footer -->
   <footer class="bg-neutral-900 text-white py-12">
     <div class="container mx-auto px-4">
+      <!-- Main Footer Grid -->
       <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Column 1: Brand -->
         <div>
           <div class="flex items-center space-x-2 mb-4">
             <span class="text-3xl">🍓</span>
-            <span class="font-display text-2xl font-bold">Nutrimonse</span>
+            <span class="font-display text-2xl font-bold">NutriMonseMoreno</span>
           </div>
-          <p class="text-neutral-400 text-sm">
-            Nutrición especializada para el embarazo. Acompañándote en cada etapa de tu gestación.
+          <p class="text-neutral-400 text-sm leading-relaxed mb-3">
+            Nutrición especializada en salud hormonal femenina, embarazo y lactancia.
+          </p>
+          <p class="text-xs text-neutral-500">
+            Ced. Prof. 11581539
           </p>
         </div>
 
+        <!-- Column 2: Enlaces Rápidos -->
         <div>
           <h4 class="font-bold mb-4">Enlaces Rápidos</h4>
           <ul class="space-y-2 text-sm text-neutral-400">
             <li><a href="#hero" class="hover:text-primary-400 transition-colors">Inicio</a></li>
-            <li><a href="#propuesta-valor" class="hover:text-primary-400 transition-colors">Propuesta de Valor</a></li>
-            <li><a href="#sobre-especialista" class="hover:text-primary-400 transition-colors">Sobre la Especialista</a></li>
-            <li><a href="#areas-especializacion" class="hover:text-primary-400 transition-colors">Áreas de Especialización</a></li>
+            <li><a href="#sobre-especialista" class="hover:text-primary-400 transition-colors">Sobre Mí</a></li>
+            <li><a href="#areas-especializacion" class="hover:text-primary-400 transition-colors">Servicios</a></li>
+            <li><a href="#testimonios" class="hover:text-primary-400 transition-colors">Testimonios</a></li>
+            <li><a href="#ubicaciones" class="hover:text-primary-400 transition-colors">Ubicaciones</a></li>
+            <li><a href="#contacto" class="hover:text-primary-400 transition-colors">Contacto</a></li>
           </ul>
         </div>
 
+        <!-- Column 3: Contacto -->
         <div>
-          <h4 class="font-bold mb-4">Legal</h4>
-          <ul class="space-y-2 text-sm text-neutral-400">
-            <li><a href="#" class="hover:text-primary-400 transition-colors">Aviso de Privacidad</a></li>
-            <li><a href="#" class="hover:text-primary-400 transition-colors">Términos y Condiciones</a></li>
-            <li><a href="#" class="hover:text-primary-400 transition-colors">Política de Cookies</a></li>
+          <h4 class="font-bold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm text-neutral-400">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <a href="mailto:hola@nutrimonse.com" class="hover:text-primary-400 transition-colors">hola@nutrimonse.com</a>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-secondary-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <a href="https://wa.me/523312345678" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400 transition-colors">+52 33 1234 5678</a>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-3 text-neutral-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <a href="tel:+523312345678" class="hover:text-primary-400 transition-colors">+52 33 1234 5678</a>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div class="border-t border-neutral-800 pt-8 text-center text-sm text-neutral-400">
-        <p>&copy; 2025 Nutrimonse. Todos los derechos reservados. Cédula Profesional: 123456789</p>
+      <!-- Social Media Section -->
+      <div class="border-t border-neutral-800 pt-8 mb-8">
+        <h4 class="font-bold text-center mb-4">Sígueme</h4>
+        <div class="flex justify-center space-x-6">
+          <a href="https://instagram.com/nutrimonse" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-primary-400 transition-colors" aria-label="Instagram">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/nutrimonse" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-primary-400 transition-colors" aria-label="Facebook">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@nutrimonse" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-primary-400 transition-colors" aria-label="TikTok">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/company/nutrimonse" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-neutral-800 pt-8 text-center text-sm text-neutral-500">
+        <p>&copy; 2025 Nutrimonse. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Widget Flotante WhatsApp -->
+  <a 
+    href="https://wa.me/523312345678?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20las%20consultas%20de%20nutrici%C3%B3n" 
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn-whatsapp-float"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="hidden sm:inline font-semibold">¿Tienes dudas?</span>
+  </a>
 
   <!-- Scripts -->
   
