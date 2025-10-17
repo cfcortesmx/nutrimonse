@@ -956,3 +956,26 @@
 * {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Value Prop Cards - Compactos en mobile */
+@media (max-width: 767px) {
+  .value-pillar {
+    @apply flex flex-row items-start gap-4 p-4;
+  }
+  
+  .value-pillar > div {
+    @apply flex flex-row items-start gap-4 text-left;
+  }
+  
+  .value-pillar .w-16 {
+    @apply w-12 h-12 mb-0 flex-shrink-0;
+  }
+  
+  .value-pillar h3 {
+    @apply text-lg mb-2;
+  }
+  
+  .value-pillar p {
+    @apply text-sm;
+  }
+}
