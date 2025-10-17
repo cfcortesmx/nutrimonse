@@ -78,17 +78,18 @@
 
   <!-- HERO START -->
   <section class="hero-section relative min-h-screen flex items-center overflow-hidden">
-    <!-- Background with blur for mobile -->
+    <!-- Background - Different for mobile vs desktop -->
     <div class="absolute inset-0">
-      <!-- Mobile: blurred background image -->
+      <!-- Mobile: Nutrition-themed background image with gradient overlay -->
       <div class="md:hidden absolute inset-0">
         <img 
-          src="assets/nutriologa-hero.png" 
+          src="assets/nutrition-background.jpg" 
           alt="" 
           class="w-full h-full object-cover"
           loading="eager"
         />
-        <div class="absolute inset-0 bg-white/85 backdrop-blur-md"></div>
+        <!-- Gradient overlay: primary color with transparency -->
+        <div class="absolute inset-0 bg-gradient-to-b from-primary-600/80 via-primary-500/85 to-primary-600/90"></div>
       </div>
       
       <!-- Desktop: gradient background -->
@@ -105,24 +106,33 @@
         <!-- Left Column - Content -->
         <div class="order-1 lg:order-1 text-center lg:text-left">
           
-          <!-- Headline - Mobile: smaller and shorter -->
-          <h1 id="hero-title" class="hero-title font-display text-3xl md:text-6xl lg:text-7xl font-bold text-neutral-900 mb-6 leading-snug md:leading-tight">
-            <!-- Mobile: shorter copy (8 words) -->
-            <span class="md:hidden">Recupera tu <span class="text-primary-600">salud hormonal</span> sin dietas extremas</span>
-            <!-- Desktop: full copy -->
-            <span class="hidden md:inline">Recupera tu salud <span class="text-primary-600">hormonal</span> y siéntete bien <span class="text-secondary-600">sin dietas extremas</span></span>
-          </h1>
+          <!-- Mobile: Simplified design without CTAs -->
+          <div class="md:hidden space-y-6">
+            <!-- Headline - Mobile: white text on colored background -->
+            <h1 class="font-display text-4xl font-bold text-white leading-tight">
+              Recupera tu <span class="text-secondary-200">salud hormonal</span> sin dietas extremas
+            </h1>
 
-          <!-- Subheadline - Mobile: shorter -->
-          <p class="hero-subtitle text-lg md:text-3xl text-neutral-600 mb-10 leading-snug md:leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            <!-- Mobile: shorter (4 words) -->
-            <span class="md:hidden">Nutrición especializada para mujeres</span>
-            <!-- Desktop: full -->
-            <span class="hidden md:inline">Nutrición clínica especializada para mujeres que buscan resultados reales.</span>
-          </p>
+            <!-- Subheadline - Mobile: lighter white -->
+            <p class="text-xl text-white/90 leading-snug">
+              Nutrición especializada para mujeres
+            </p>
+          </div>
 
-          <!-- Primary CTAs - WhatsApp + Teléfono -->
-          <div class="hero-cta flex flex-col items-start justify-center lg:justify-start gap-4">
+          <!-- Desktop: Full design with CTAs -->
+          <div class="hidden md:block space-y-8">
+            <!-- Headline -->
+            <h1 id="hero-title" class="hero-title font-display text-6xl lg:text-7xl font-bold text-neutral-900 leading-tight">
+              Recupera tu salud <span class="text-primary-600">hormonal</span> y siéntete bien <span class="text-secondary-600">sin dietas extremas</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="hero-subtitle text-3xl text-neutral-600 leading-relaxed max-w-2xl">
+              Nutrición clínica especializada para mujeres que buscan resultados reales.
+            </p>
+
+            <!-- Primary CTAs - WhatsApp + Teléfono -->
+            <div class="hero-cta flex flex-col items-start justify-center lg:justify-start gap-4">
             <!-- Botones principales -->
             <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <!-- WhatsApp CTA Principal -->
@@ -183,10 +193,11 @@
               </div>
             </div>
           </div>
+          <!-- End desktop hero content -->
         </div>
 
-        <!-- Right Column - Professional Photo -->
-        <div class="order-2 lg:order-2">
+        <!-- Right Column - Professional Photo - Hidden on mobile -->
+        <div class="order-2 lg:order-2 hidden md:block">
           <div class="hero-image relative">
             <!-- Main Image -->
             <div class="relative rounded-3xl overflow-hidden shadow-2xl">
