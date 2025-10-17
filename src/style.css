@@ -220,53 +220,66 @@
 }
 
 /* ===========================================
-   BENEFITS CLUSTER - Layout Orgánico
+   BENEFITS CLUSTER - Layout Escalonado Dramático
    =========================================== */
 
-/* Alineaciones y dirección según lado */
-@layer components {
-  .benefit-item.left .content { 
-    @apply flex-row-reverse text-right justify-end; 
-  }
-  .benefit-item.right .content { 
-    @apply flex-row text-left justify-start; 
-  }
+.services-grid-dramatic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 200px; /* Espacio extra para compensar el desplazamiento */
 }
 
-/* Curva con offsets incrementales para efecto envolvente */
-@layer utilities {
-  /* Columna izquierda: curva ascendente gradual */
-  .benefit-col.left .benefit-item:nth-child(1) { 
-    transform: translateY(24px); 
-  }
-  .benefit-col.left .benefit-item:nth-child(2) { 
-    transform: translateY(12px); 
-  }
-  .benefit-col.left .benefit-item:nth-child(3) { 
-    transform: translateY(0); 
-  }
+.services-grid-dramatic .service-card:nth-child(1) {
+  transform: translateY(0px);
+}
 
-  /* Columna derecha: curva descendente gradual (espejo) */
-  .benefit-col.right .benefit-item:nth-child(1) { 
-    transform: translateY(0); 
-  }
-  .benefit-col.right .benefit-item:nth-child(2) { 
-    transform: translateY(12px); 
-  }
-  .benefit-col.right .benefit-item:nth-child(3) { 
-    transform: translateY(24px); 
-  }
+.services-grid-dramatic .service-card:nth-child(2) {
+  transform: translateY(50px);
+}
 
-  /* En móvil quitamos la curva para mantener legibilidad */
-  @media (max-width: 1023px) {
-    .benefit-col.left .benefit-item:nth-child(1),
-    .benefit-col.left .benefit-item:nth-child(2),
-    .benefit-col.left .benefit-item:nth-child(3),
-    .benefit-col.right .benefit-item:nth-child(1),
-    .benefit-col.right .benefit-item:nth-child(2),
-    .benefit-col.right .benefit-item:nth-child(3) { 
-      transform: translateY(0); 
-    }
+.services-grid-dramatic .service-card:nth-child(3) {
+  transform: translateY(100px);
+}
+
+.services-grid-dramatic .service-card:nth-child(4) {
+  transform: translateY(150px);
+}
+
+.services-grid-dramatic .service-card:nth-child(5) {
+  transform: translateY(200px);
+}
+
+.services-grid-dramatic .service-card:nth-child(6) {
+  transform: translateY(250px);
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(231,76,100,0.12);
+}
+
+/* En móvil quitamos el escalonamiento y usamos una columna */
+@media (max-width: 768px) {
+  .services-grid-dramatic {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 120px;
+  }
+  .services-grid-dramatic .service-card:nth-child(n) {
+    transform: translateY(0) !important;
   }
 }
 
@@ -274,6 +287,62 @@
 @media print {
   .no-print {
     display: none;
+  }
+}
+
+/* Dramatic grid para sección ¿Con qué puedo ayudarte? */
+.services-grid-dramatic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+}
+
+.services-grid-dramatic .service-card:nth-child(1) {
+  transform: translateY(0px);
+}
+.services-grid-dramatic .service-card:nth-child(2) {
+  transform: translateY(50px);
+}
+.services-grid-dramatic .service-card:nth-child(3) {
+  transform: translateY(100px);
+}
+.services-grid-dramatic .service-card:nth-child(4) {
+  transform: translateY(150px);
+}
+.services-grid-dramatic .service-card:nth-child(5) {
+  transform: translateY(200px);
+}
+.services-grid-dramatic .service-card:nth-child(6) {
+  transform: translateY(250px);
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(231,76,100,0.12);
+  transform: scale(1.04);
+}
+@media (max-width: 768px) {
+  .services-grid-dramatic {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 120px;
+  }
+  .services-grid-dramatic .service-card:nth-child(n) {
+    transform: none;
   }
 }
 
