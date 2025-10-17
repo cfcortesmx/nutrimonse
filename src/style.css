@@ -498,48 +498,8 @@
   }
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .benefits-circular-container {
-    min-height: auto;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 3rem;
-  }
-  
-  .central-image {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    order: 1;
-    margin: 2rem 0;
-  }
-  
-  .benefit-circular-item {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    max-width: 280px;
-    margin: 0 auto;
-    flex-direction: row !important;
-    text-align: left !important;
-  }
-  
-  .benefit-content {
-    text-align: left;
-  }
-  
-  .benefit-item-1 { order: 0; }
-  .benefit-item-2 { order: 2; }
-  .benefit-item-3 { order: 3; }
-  .benefit-item-4 { order: 4; }
-  .benefit-item-5 { order: 5; }
-  .benefit-item-6 { order: 6; }
-}
+/* NOTA: Media query para mobile ELIMINADA - Ahora usamos grid 2x3 separado para mobile */
+/* El diseño circular solo se muestra en desktop con 'hidden md:block' */
 
 /* ===========================================
    TESTIMONIOS - Carrusel Mejorado
@@ -679,6 +639,14 @@
   transition: all 0.3s ease;
   z-index: 10;
   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Ocultar controles laterales en mobile - se usan controles bottom */
+@media (max-width: 767px) {
+  .carousel-control.prev,
+  .carousel-control.next {
+    display: none !important;
+  }
 }
 
 .carousel-control:hover {
