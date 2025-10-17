@@ -99,7 +99,7 @@
 
   /* Nuevos componentes - Hero CTAs */
   .btn-whatsapp-large {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 
+    @apply inline-flex items-center justify-center gap-3 px-8 py-3 md:py-4
            bg-secondary-500 text-white font-bold rounded-full text-lg
            hover:bg-secondary-600 
            hover:shadow-xl hover:shadow-secondary-500/30 
@@ -110,7 +110,7 @@
   }
 
   .btn-outline-large {
-    @apply inline-flex items-center justify-center gap-3 px-8 py-4 
+    @apply inline-flex items-center justify-center gap-3 px-8 py-3 md:py-4
            border-2 border-neutral-300 text-neutral-700 font-bold 
            rounded-full text-lg hover:bg-neutral-50 hover:border-neutral-400;
     transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -119,7 +119,7 @@
 
   /* Widget flotante WhatsApp */
   .btn-whatsapp-float {
-    @apply fixed bottom-6 right-6 z-50
+    @apply fixed bottom-20 right-6 z-50
            bg-secondary-500 text-white
            px-5 py-3 rounded-full shadow-2xl
            flex items-center gap-2
@@ -144,7 +144,7 @@
 
   /* Iconos sociales en Hero */
   .social-icon-hero {
-    @apply w-10 h-10 rounded-full
+    @apply w-12 h-12 rounded-full
            flex items-center justify-center
            bg-white border-2 border-neutral-200
            text-neutral-600 hover:text-primary-500
