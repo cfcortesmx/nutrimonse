@@ -524,6 +524,8 @@ heroImages.forEach((img) => {
 const testimonialsCarousel = document.getElementById('testimonials-carousel');
 const prevBtn = document.getElementById('testimonial-prev');
 const nextBtn = document.getElementById('testimonial-next');
+const prevBtnMobile = document.getElementById('testimonial-prev-mobile');
+const nextBtnMobile = document.getElementById('testimonial-next-mobile');
 const indicators = document.querySelectorAll('.indicator');
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 
@@ -571,7 +573,7 @@ if (testimonialsCarousel && testimonialCards.length > 0) {
     startAutoplay();
   }
 
-  // Controles manuales
+  // Controles manuales desktop
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       prevTestimonial();
@@ -581,6 +583,39 @@ if (testimonialsCarousel && testimonialCards.length > 0) {
 
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
+      nextTestimonial();
+      resetAutoplay();
+    });
+  }
+
+  // Controles manuales mobile
+  const prevBtnMobile = document.getElementById('testimonial-prev-mobile');
+  const nextBtnMobile = document.getElementById('testimonial-next-mobile');
+  
+  if (prevBtnMobile) {
+    prevBtnMobile.addEventListener('click', () => {
+      prevTestimonial();
+      resetAutoplay();
+    });
+  }
+
+  if (nextBtnMobile) {
+    nextBtnMobile.addEventListener('click', () => {
+      nextTestimonial();
+      resetAutoplay();
+    });
+  }
+
+  // Controles manuales mobile
+  if (prevBtnMobile) {
+    prevBtnMobile.addEventListener('click', () => {
+      prevTestimonial();
+      resetAutoplay();
+    });
+  }
+
+  if (nextBtnMobile) {
+    nextBtnMobile.addEventListener('click', () => {
       nextTestimonial();
       resetAutoplay();
     });

@@ -77,7 +77,24 @@
   </header>
 
   <!-- HERO START -->
-  <section class="hero-section relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+  <section class="hero-section relative min-h-screen flex items-center overflow-hidden">
+    <!-- Background with blur for mobile -->
+    <div class="absolute inset-0">
+      <!-- Mobile: blurred background image -->
+      <div class="md:hidden absolute inset-0">
+        <img 
+          src="assets/nutriologa-hero.png" 
+          alt="" 
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-white/85 backdrop-blur-md"></div>
+      </div>
+      
+      <!-- Desktop: gradient background -->
+      <div class="hidden md:block absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50"></div>
+    </div>
+    
     <div class="absolute inset-0 opacity-10">
       <div class="parallax-bg absolute inset-0 bg-[url('/assets/pattern.svg')] bg-repeat" data-speed="-0.5"></div>
     </div>
@@ -88,14 +105,20 @@
         <!-- Left Column - Content -->
         <div class="order-1 lg:order-1 text-center lg:text-left">
           
-          <!-- Headline - Simplificado y directo -->
-          <h1 id="hero-title" class="hero-title font-display text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-900 mb-6 leading-tight">
-            Recupera tu salud <span class="text-primary-600">hormonal</span> y siéntete bien <span class="text-secondary-600">sin dietas extremas</span>
+          <!-- Headline - Mobile: smaller and shorter -->
+          <h1 id="hero-title" class="hero-title font-display text-3xl md:text-6xl lg:text-7xl font-bold text-neutral-900 mb-6 leading-snug md:leading-tight">
+            <!-- Mobile: shorter copy (8 words) -->
+            <span class="md:hidden">Recupera tu <span class="text-primary-600">salud hormonal</span> sin dietas extremas</span>
+            <!-- Desktop: full copy -->
+            <span class="hidden md:inline">Recupera tu salud <span class="text-primary-600">hormonal</span> y siéntete bien <span class="text-secondary-600">sin dietas extremas</span></span>
           </h1>
 
-          <!-- Subheadline - Breve y con autoridad (1 línea) -->
-          <p class="hero-subtitle text-2xl md:text-3xl text-neutral-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Nutrición clínica especializada para mujeres que buscan resultados reales.
+          <!-- Subheadline - Mobile: shorter -->
+          <p class="hero-subtitle text-lg md:text-3xl text-neutral-600 mb-10 leading-snug md:leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <!-- Mobile: shorter (4 words) -->
+            <span class="md:hidden">Nutrición especializada para mujeres</span>
+            <!-- Desktop: full -->
+            <span class="hidden md:inline">Nutrición clínica especializada para mujeres que buscan resultados reales.</span>
           </p>
 
           <!-- Primary CTAs - WhatsApp + Teléfono -->
@@ -253,8 +276,8 @@
         </h2>
       </div>
 
-      <!-- 3 Pillars Grid -->
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
+      <!-- 3 Pillars Grid - Responsive: 1 col mobile, 2 cols tablet, 3 cols desktop -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-7xl mx-auto">
         
         <!-- Pilar 1: Resultados Comprobados -->
         <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
@@ -642,84 +665,78 @@
             </div>
           </div>
 
-          <!-- Lista de servicios -->
-          <ul class="space-y-4">
-            <li class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-neutral-100">
-              <div class="w-12 h-12 flex-shrink-0 bg-primary-100 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary-600" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Lista de servicios - Grid compacto 2x3 -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex flex-col items-center gap-2 p-3 bg-white rounded-xl shadow-sm border border-neutral-100">
+              <div class="w-10 h-10 flex-shrink-0 bg-primary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-600" viewBox="0 0 24 24" fill="currentColor">
                   <circle cx="12" cy="12" r="10" opacity="0.2"/>
                   <circle cx="12" cy="12" r="4"/>
                 </svg>
               </div>
-              <div>
-                <h3 class="font-bold text-lg text-neutral-900 mb-1">Salud Hormonal</h3>
-                <p class="text-sm text-neutral-600">SOP, tiroides, menopausia</p>
+              <div class="text-center">
+                <h3 class="font-bold text-sm text-neutral-900 leading-tight">Salud Hormonal</h3>
               </div>
-            </li>
+            </div>
             
-            <li class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-neutral-100">
-              <div class="w-12 h-12 flex-shrink-0 bg-secondary-100 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-secondary-600" viewBox="0 0 24 24" fill="currentColor">
+            <div class="flex flex-col items-center gap-2 p-3 bg-white rounded-xl shadow-sm border border-neutral-100">
+              <div class="w-10 h-10 flex-shrink-0 bg-secondary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-secondary-600" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C10.3431 2 9 3.34315 9 5V7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7V5C15 3.34315 13.6569 2 12 2Z"/>
                   <path d="M5 12C5 10.3431 6.34315 9 8 9H16C17.6569 9 19 10.3431 19 12V14C19 15.6569 17.6569 17 16 17H8C6.34315 17 5 15.6569 5 14V12Z" opacity="0.5"/>
                 </svg>
               </div>
-              <div>
-                <h3 class="font-bold text-lg text-neutral-900 mb-1">Control de Peso</h3>
-                <p class="text-sm text-neutral-600">Sin dietas restrictivas</p>
+              <div class="text-center">
+                <h3 class="font-bold text-sm text-neutral-900 leading-tight">Control de Peso</h3>
               </div>
-            </li>
+            </div>
             
-            <li class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-neutral-100">
-              <div class="w-12 h-12 flex-shrink-0 bg-primary-100 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <div class="flex flex-col items-center gap-2 p-3 bg-white rounded-xl shadow-sm border border-neutral-100">
+              <div class="w-10 h-10 flex-shrink-0 bg-primary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/>
                 </svg>
               </div>
-              <div>
-                <h3 class="font-bold text-lg text-neutral-900 mb-1">Nutrición Clínica</h3>
-                <p class="text-sm text-neutral-600">Hígado graso, hipertensión</p>
+              <div class="text-center">
+                <h3 class="font-bold text-sm text-neutral-900 leading-tight">Nutrición Clínica</h3>
               </div>
-            </li>
+            </div>
             
-            <li class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-neutral-100">
-              <div class="w-12 h-12 flex-shrink-0 bg-secondary-100 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-secondary-600" viewBox="0 0 24 24" fill="currentColor">
+            <div class="flex flex-col items-center gap-2 p-3 bg-white rounded-xl shadow-sm border border-neutral-100">
+              <div class="w-10 h-10 flex-shrink-0 bg-secondary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-secondary-600" viewBox="0 0 24 24" fill="currentColor">
                   <circle cx="12" cy="8" r="4" opacity="0.5"/>
                   <path d="M12 13C8 13 5 15 5 18V20H19V18C19 15 16 13 12 13Z" opacity="0.8"/>
                 </svg>
               </div>
-              <div>
-                <h3 class="font-bold text-lg text-neutral-900 mb-1">Nutrición Infantil</h3>
-                <p class="text-sm text-neutral-600">Desde 6 meses hasta adolescencia</p>
+              <div class="text-center">
+                <h3 class="font-bold text-sm text-neutral-900 leading-tight">Nutrición Infantil</h3>
               </div>
-            </li>
+            </div>
             
-            <li class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-neutral-100">
-              <div class="w-12 h-12 flex-shrink-0 bg-primary-100 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-primary-600" viewBox="0 0 24 24" fill="currentColor">
+            <div class="flex flex-col items-center gap-2 p-3 bg-white rounded-xl shadow-sm border border-neutral-100">
+              <div class="w-10 h-10 flex-shrink-0 bg-primary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-primary-600" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2L16 10L24 12L16 14L12 22L8 14L0 12L8 10L12 2Z" opacity="0.3"/>
                   <circle cx="12" cy="12" r="3"/>
                 </svg>
               </div>
-              <div>
-                <h3 class="font-bold text-lg text-neutral-900 mb-1">Planes Personalizados</h3>
-                <p class="text-sm text-neutral-600">100% a tu medida</p>
+              <div class="text-center">
+                <h3 class="font-bold text-sm text-neutral-900 leading-tight">Planes Personalizados</h3>
               </div>
-            </li>
+            </div>
             
-            <li class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-neutral-100">
-              <div class="w-12 h-12 flex-shrink-0 bg-secondary-100 rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-secondary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <div class="flex flex-col items-center gap-2 p-3 bg-white rounded-xl shadow-sm border border-neutral-100">
+              <div class="w-10 h-10 flex-shrink-0 bg-secondary-100 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-secondary-600" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12h4l3-9 4 18 3-9h4"/>
                 </svg>
               </div>
-              <div>
-                <h3 class="font-bold text-lg text-neutral-900 mb-1">Seguimiento Continuo</h3>
-                <p class="text-sm text-neutral-600">Acompañamiento constante</p>
+              <div class="text-center">
+                <h3 class="font-bold text-sm text-neutral-900 leading-tight">Seguimiento Continuo</h3>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Desktop: Diseño circular original -->
@@ -1046,25 +1063,42 @@
 
         </div>
 
-        <!-- Controles del carrusel -->
-        <button class="carousel-control prev" id="testimonial-prev" aria-label="Testimonio anterior">
+        <!-- Controles del carrusel - Ocultos en mobile, visibles en desktop -->
+        <button class="carousel-control prev hidden md:flex" id="testimonial-prev" aria-label="Testimonio anterior">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </button>
-        <button class="carousel-control next" id="testimonial-next" aria-label="Siguiente testimonio">
+        <button class="carousel-control next hidden md:flex" id="testimonial-next" aria-label="Siguiente testimonio">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
 
-        <!-- Indicadores -->
-        <div class="carousel-indicators" id="carousel-indicators">
-          <button class="indicator active" data-index="0"></button>
-          <button class="indicator" data-index="1"></button>
-          <button class="indicator" data-index="2"></button>
-          <button class="indicator" data-index="3"></button>
-          <button class="indicator" data-index="4"></button>
+        <!-- Indicadores + Controles mobile (abajo del card) -->
+        <div class="flex flex-col items-center gap-4 mt-6">
+          <!-- Controles mobile (horizontal) - solo visible en mobile -->
+          <div class="md:hidden flex items-center gap-6">
+            <button class="w-10 h-10 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-colors" id="testimonial-prev-mobile" aria-label="Testimonio anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="w-10 h-10 rounded-full bg-neutral-100 hover:bg-neutral-200 flex items-center justify-center transition-colors" id="testimonial-next-mobile" aria-label="Siguiente testimonio">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Indicadores -->
+          <div class="carousel-indicators" id="carousel-indicators">
+            <button class="indicator active" data-index="0"></button>
+            <button class="indicator" data-index="1"></button>
+            <button class="indicator" data-index="2"></button>
+            <button class="indicator" data-index="3"></button>
+            <button class="indicator" data-index="4"></button>
+          </div>
         </div>      </div>
 
     </div>
@@ -1235,7 +1269,10 @@
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
-          Consultar disponibilidad por WhatsApp
+          <!-- Mobile: texto corto -->
+          <span class="md:hidden">Consultar disponibilidad</span>
+          <!-- Desktop: texto completo -->
+          <span class="hidden md:inline">Consultar disponibilidad por WhatsApp</span>
         </a>
       </div>
 
