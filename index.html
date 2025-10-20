@@ -77,50 +77,65 @@
   </header>
 
   <!-- HERO START -->
-  <section class="hero-section relative h-screen max-h-[70vh] md:max-h-none md:min-h-screen flex md:items-center overflow-hidden">
-    <!-- Background - Different for mobile vs desktop -->
-    <div class="absolute inset-0">
-      <!-- Mobile: Nutrition-themed background image with gradient overlay -->
-      <div class="md:hidden absolute inset-0">
-        <img 
-          src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&auto=format&fit=crop&q=80" 
-          alt="" 
-          class="w-full h-full object-cover"
-          loading="eager"
-        />
-        <!-- Gradient overlay: white with transparency for clean look -->
-        <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-white/85 to-white/90"></div>
-      </div>
-      
-      <!-- Desktop: gradient background -->
-      <div class="hidden md:block absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50"></div>
-    </div>
+  <section class="hero-section relative h-screen overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 flex items-center">
     
-    <div class="absolute inset-0 opacity-10">
+    <!-- Background Layer -->
+    <div class="absolute inset-0 z-0 opacity-10">
       <div class="parallax-bg absolute inset-0 bg-[url('/assets/pattern.svg')] bg-repeat" data-speed="-0.5"></div>
     </div>
     
-    <div class="container mx-auto px-4 pt-24 pb-6 md:py-20 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-        
-        <!-- Left Column - Content -->
-        <div class="order-1 lg:order-1 text-left lg:text-left">
+    <!-- Content Layer - Mobile -->
+    <div class="md:hidden relative z-10 h-full w-full flex flex-col justify-start pt-20 pr-4 pl-6">
+      
+      <!-- Main Content - Positioned to right side with margin-left auto -->
+      <div class="w-full max-w-xs ml-auto">
+        <div class="space-y-5">
           
-          <!-- Mobile: Simplified design without CTAs -->
-          <div class="md:hidden space-y-6">
-            <!-- Headline - Mobile: black text with red accent + shadow -->
-            <h1 class="font-display text-4xl font-bold text-neutral-900 leading-tight drop-shadow-lg">
-              Recupera tu <span class="text-primary-600">salud hormonal</span> sin dietas extremas
+          <!-- Name/Title - Gradient Rosa -->
+          <div>
+            <h1 class="font-display text-5xl font-black bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent leading-[1.1] tracking-tight text-right">
+              Monserrat<br>Moreno
             </h1>
-
-            <!-- Subheadline - Mobile: neutral dark -->
-            <p class="text-xl text-neutral-700 leading-snug">
-              Nutrición especializada para mujeres
-            </p>
+            <div class="h-1 w-16 bg-gradient-to-r from-primary-500 to-primary-300 rounded-full mt-3 ml-auto"></div>
           </div>
 
-          <!-- Desktop: Full design with CTAs -->
-          <div class="hidden md:block space-y-8">
+          <!-- Subtitle / Credentials - Clean, no background -->
+          <p class="text-base text-primary-900 font-medium text-right leading-tight">
+            Nutrióloga Certificada especializada en <span class="text-primary-700 font-bold">salud hormonal femenina</span>
+          </p>
+          
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator - Right aligned, elegant design -->
+      <div class="flex flex-col items-end gap-1 px-4 pr-6 pb-2 mt-auto">
+        <span class="text-xs font-medium text-neutral-600 tracking-wide">Conoce más</span>
+        <div class="flex items-center gap-1">
+          <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Nutriologist Image - Bottom Left Corner - Much Larger, Pushed Left -->
+      <div class="absolute bottom-0 -left-16 w-96 h-auto pointer-events-none">
+        <img 
+          src="/assets/nutriologa-hero.png" 
+          alt="Monserrat Moreno - Nutrióloga" 
+          class="w-full h-full object-contain"
+        />
+      </div>
+    </div>
+    
+    <!-- Content Layer - Desktop -->
+    <div class="hidden md:flex relative z-10 h-full w-full items-center">
+      <div class="container mx-auto px-4 w-full">
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
+        
+          <!-- Left Column - Content -->
+          <div class="text-left">
+            
+            <div class="space-y-8">
             <!-- Headline -->
             <h1 id="hero-title" class="hero-title font-display text-6xl lg:text-7xl font-bold text-neutral-900 leading-tight">
               Recupera tu salud <span class="text-primary-600">hormonal</span> y siéntete bien <span class="text-secondary-600">sin dietas extremas</span>
@@ -197,7 +212,7 @@
         </div>
 
         <!-- Right Column - Professional Photo - Hidden on mobile -->
-        <div class="order-2 lg:order-2 hidden md:block">
+        <div class="hidden md:block">
           <div class="hero-image relative">
             <!-- Main Image -->
             <div class="relative rounded-3xl overflow-hidden shadow-2xl">
@@ -249,15 +264,8 @@
             </div>
           </div>
         </div>
-
+        </div>
       </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
     </div>
   </section>
   <!-- HERO END -->
@@ -287,78 +295,70 @@
         </h2>
       </div>
 
-      <!-- 3 Pillars Grid - Responsive: 1 col mobile, 2 cols tablet, 3 cols desktop -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 max-w-7xl mx-auto">
+      <!-- 3 Pillars Grid - Responsive: 1 col mobile, 3 cols desktop (no tablet breakpoint) -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 max-w-6xl mx-auto">
         
         <!-- Pilar 1: Resultados Comprobados -->
-        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
-          <!-- Mobile: horizontal layout (icon + title), Desktop: vertical -->
-          <div class="flex flex-col md:items-center md:text-center">
-            <!-- Fila 1: Icon + Title horizontal en mobile -->
-            <div class="flex items-center gap-4 mb-4 md:flex-col md:gap-0">
-              <!-- Icon -->
-              <div class="w-12 h-12 md:w-16 md:h-16 bg-secondary-100 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-6 h-6 md:w-8 md:h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                </svg>
-              </div>
-              
-              <!-- Title -->
-              <h3 class="text-lg md:text-xl font-bold text-neutral-900 md:mb-4">
-                Resultados Comprobados
-              </h3>
+        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-5 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
+          <div class="flex flex-col items-center text-center space-y-3">
+            <!-- Icon -->
+            <div class="w-14 h-14 lg:w-16 lg:h-16 bg-secondary-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
             </div>
             
-            <!-- Fila 2: Description full width -->
-            <p class="text-neutral-600 leading-relaxed text-left md:text-center">
+            <!-- Title -->
+            <h3 class="text-lg lg:text-xl font-bold text-neutral-900">
+              Resultados Comprobados
+            </h3>
+            
+            <!-- Description -->
+            <p class="text-sm lg:text-base text-neutral-600 leading-relaxed">
               Casos reales de embarazos logrados, ciclos regulares recuperados y parámetros bioquímicos mejorados
             </p>
           </div>
         </div>
 
         <!-- Pilar 2: Sin Sufrimiento -->
-        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
-          <div class="flex flex-col md:items-center md:text-center">
-            <div class="flex items-center gap-4 mb-4 md:flex-col md:gap-0">
-              <!-- Icon -->
-              <div class="w-12 h-12 md:w-16 md:h-16 bg-primary-100 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-6 h-6 md:w-8 md:h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
-                </svg>
-              </div>
-              
-              <!-- Title -->
-              <h3 class="text-lg md:text-xl font-bold text-neutral-900 md:mb-4">
-                Sin Sufrimiento
-              </h3>
+        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-5 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
+          <div class="flex flex-col items-center text-center space-y-3">
+            <!-- Icon -->
+            <div class="w-14 h-14 lg:w-16 lg:h-16 bg-primary-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+              </svg>
             </div>
             
+            <!-- Title -->
+            <h3 class="text-lg lg:text-xl font-bold text-neutral-900">
+              Sin Sufrimiento
+            </h3>
+            
             <!-- Description -->
-            <p class="text-neutral-600 leading-relaxed text-left md:text-center">
+            <p class="text-sm lg:text-base text-neutral-600 leading-relaxed">
               Planes nutricionales que incluyen lo que te gusta. Come rico, variado y disfruta el proceso
             </p>
           </div>
         </div>
 
         <!-- Pilar 3: Tecnología + Acompañamiento -->
-        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
-          <div class="flex flex-col md:items-center md:text-center">
-            <div class="flex items-center gap-4 mb-4 md:flex-col md:gap-0">
-              <!-- Icon -->
-              <div class="w-12 h-12 md:w-16 md:h-16 bg-secondary-100 rounded-xl md:rounded-2xl flex items-center justify-center flex-shrink-0 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg class="w-6 h-6 md:w-8 md:h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                </svg>
-              </div>
-              
-              <!-- Title -->
-              <h3 class="text-lg md:text-xl font-bold text-neutral-900 md:mb-4">
-                Tecnología + Acompañamiento Humano
-              </h3>
+        <div class="value-pillar group relative z-10 bg-white rounded-2xl p-5 lg:p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:z-20">
+          <div class="flex flex-col items-center text-center space-y-3">
+            <!-- Icon -->
+            <div class="w-14 h-14 lg:w-16 lg:h-16 bg-secondary-100 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
             </div>
             
+            <!-- Title -->
+            <h3 class="text-lg lg:text-xl font-bold text-neutral-900">
+              Tecnología + Acompañamiento Humano
+            </h3>
+            
             <!-- Description -->
-            <p class="text-neutral-600 leading-relaxed text-left md:text-center">
+            <p class="text-sm lg:text-base text-neutral-600 leading-relaxed">
               App nutricional + seguimiento personalizado vía WhatsApp. Nunca estarás sola en tu proceso
             </p>
           </div>
@@ -911,7 +911,7 @@
       </div>
 
       <!-- Carrusel de Testimonios -->
-      <div class="testimonials-carousel-wrapper max-w-4xl mx-auto relative">
+      <div class="testimonials-carousel-wrapper max-w-7xl mx-auto relative">
         
         <div class="testimonials-carousel" id="testimonials-carousel">
           
