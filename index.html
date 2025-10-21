@@ -77,7 +77,7 @@
   </header>
 
   <!-- HERO START -->
-  <section class="hero-section relative h-screen overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 flex items-center">
+  <section class="hero-section relative h-screen overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 flex items-center pt-16">
     
     <!-- Background Layer -->
     <div class="absolute inset-0 z-0 opacity-10">
@@ -128,14 +128,12 @@
     </div>
     
     <!-- Content Layer - Desktop -->
-    <div class="hidden md:flex relative z-10 h-full w-full items-center">
-      <div class="container mx-auto px-4 w-full">
-        <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
+    <div class="hidden md:grid md:grid-cols-2 relative z-10 w-full gap-12 items-center">
+      <div class="pl-12 pr-8 py-12 w-full">
         
-          <!-- Left Column - Content -->
-          <div class="text-left">
+          <!-- Left Column - All Content -->
+          <div class="text-left space-y-8">
             
-            <div class="space-y-8">
             <!-- Headline -->
             <h1 id="hero-title" class="hero-title font-display text-6xl lg:text-7xl font-bold text-neutral-900 leading-tight">
               Recupera tu salud <span class="text-primary-600">hormonal</span> y siéntete bien <span class="text-secondary-600">sin dietas extremas</span>
@@ -147,7 +145,7 @@
             </p>
 
             <!-- Primary CTAs - WhatsApp + Teléfono -->
-            <div class="hero-cta flex flex-col items-start justify-center lg:justify-start gap-4">
+            <div class="hero-cta flex flex-col items-start justify-center gap-4">
             <!-- Botones principales -->
             <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <!-- WhatsApp CTA Principal -->
@@ -207,22 +205,22 @@
                 </a>
               </div>
             </div>
+            </div>
           </div>
-          <!-- End desktop hero content -->
+      </div>
 
-          <!-- Right Column - Professional Photo -->
-          <div class="hidden md:block">
-            <div class="hero-image relative">
+      <!-- Right Column - Professional Photo -->
+      <div class="px-8 py-12 flex items-center justify-center">
+        <div class="hero-image relative max-h-[70vh] w-full max-w-lg">
             <!-- Main Image -->
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl h-full">
               <img 
                 src="/assets/hero-nutriologa.png" 
                 alt="Nutrióloga especialista en salud hormonal" 
-                class="w-full h-auto object-cover"
+                class="w-full h-full object-cover"
                 loading="lazy"
                 width="800"
                 height="1000"
-                style="min-height: 400px;"
               >
               <!-- Gradient Overlay (más sutil) -->
               <div class="absolute inset-0 bg-gradient-to-t from-primary-900/5 to-transparent"></div>
@@ -261,7 +259,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>

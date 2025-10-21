@@ -501,6 +501,13 @@
 /* NOTA: Media query para mobile ELIMINADA - Ahora usamos grid 2x3 separado para mobile */
 /* El diseño circular solo se muestra en desktop con 'hidden md:block' */
 
+/* Forzar ocultamiento del contenedor circular en mobile */
+@media (max-width: 767px) {
+  .benefits-circular-container {
+    display: none !important;
+  }
+}
+
 /* ===========================================
    TESTIMONIOS - Carrusel Mejorado
    =========================================== */
@@ -508,12 +515,25 @@
 .testimonials-carousel-wrapper {
   position: relative;
   padding: 2rem 5rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .testimonials-carousel-wrapper {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .testimonials-carousel {
   position: relative;
   overflow: hidden;
   min-height: 450px;
+}
+
+@media (max-width: 768px) {
+  .testimonials-carousel {
+    min-height: 350px;
+  }
 }
 
 .testimonial-card {
@@ -530,6 +550,12 @@
   border-radius: 1.5rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   border: 2px solid rgba(231, 76, 60, 0.1);
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem;
+  }
 }
 
 .testimonial-card.active {
@@ -705,48 +731,6 @@
   background: #e74c3c;
   opacity: 0.7;
   transform: scale(1.2);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .testimonials-carousel-wrapper {
-    padding: 1rem 3.5rem;
-  }
-  
-  .testimonial-card {
-    padding: 2rem 1.5rem;
-    min-height: auto;
-  }
-  
-  .testimonial-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .avatar-circle {
-    width: 70px;
-    height: 70px;
-    font-size: 1.5rem;
-  }
-  
-  .testimonial-name {
-    font-size: 1.25rem;
-  }
-  
-  .testimonial-text {
-    font-size: 1rem;
-  }
-  
-  .carousel-control {
-    width: 48px;
-    height: 48px;
-  }
-  
-  .carousel-control svg {
-    width: 24px;
-    height: 24px;
-  }
 }
 
 /* Print styles */
@@ -925,25 +909,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Value Prop Cards - Compactos en mobile */
-@media (max-width: 767px) {
-  .value-pillar {
-    @apply flex flex-row items-start gap-4 p-4;
-  }
-  
-  .value-pillar > div {
-    @apply flex flex-row items-start gap-4 text-left;
-  }
-  
-  .value-pillar .w-16 {
-    @apply w-12 h-12 mb-0 flex-shrink-0;
-  }
-  
-  .value-pillar h3 {
-    @apply text-lg mb-2;
-  }
-  
-  .value-pillar p {
-    @apply text-sm;
-  }
-}
+/* Value Prop Cards - Responsive adjustments */
+/* Mobile: compact design, desktop: full featured */
+
